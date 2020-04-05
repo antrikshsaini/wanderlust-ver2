@@ -1,0 +1,135 @@
+.nf-form-cont {
+
+    font-family: $font;
+    margin: 55px 90px;
+
+    .nf-form-title {
+        display: flex;
+        justify-content: center;
+        
+        h3 {
+            color: $turquoise;
+            font-size: 41px;
+            font-weight: 900;
+            text-transform: uppercase;
+            display: inline-block;
+            padding-bottom: 6px;
+            margin: 0;
+            
+        }
+    }
+    
+    label {
+        color: $dark-grey;
+        font-weight: lighter !important;
+        font-size: 16px !important;
+    } 
+
+    input {
+        border: none !important;
+        border-bottom: 1px solid $dark-grey !important;
+        background-color: $white !important;
+        height: 35px !important;
+        color: $dark-blue !important;
+        font-weight: 600;
+        padding: 0 !important;
+        font-size: 16px !important;
+    }
+
+    
+    .nf-error {
+
+        .ninja-forms-field {
+            border-color: $blue !important;
+        }
+
+        .nf-error-msg {
+            color: $blue;
+        }
+
+
+    }
+
+    .nf-error-field-errors {
+        text-align: center;
+    }
+
+    .nf-pass {
+
+        .ninja-forms-field {
+            border-color: $turquoise !important;
+        } 
+    }
+
+    .nf-pass.field-wrap .nf-field-element:after {
+            right: 13px;
+    }
+    
+    #nf-field-4-wrap{
+
+        .nf-field-element {
+            text-align: center;
+            background-color: $turquoise !important;
+            border-radius: 10px;
+
+            #nf-field-4  {
+                background-color: $turquoise !important;
+                color: $white !important;
+                border: none !important;
+                margin: 5px auto;
+            }  
+        }
+    }
+
+
+    .nf-form-content {
+        padding: 0;
+    }
+
+    .nf-form-fields-required {
+        margin: 50px auto;
+        text-align: center;
+    }
+
+    .field-wrap {
+        padding: 0;
+    }
+    
+}
+
+
+.nf-pass.field-wrap .nf-field-element:after {
+    color: $turquoise !important;
+    line-height: 30px !important;
+}
+
+.nf-error.field-wrap .nf-field-element:after {
+    background: $blue !important;
+    top: inherit !important;
+    height: 45px !important;
+}
+
+
+.nf-error-msg, .ninja-forms-req-symbol {
+    color: $blue !important;
+} 
+
+
+#nf-field-3-wrap {
+
+    .nf-field-element {
+        margin-top: 17px;
+
+        textarea {
+            background-color: $white !important;
+            border-bottom: 1px solid $dark-grey !important;
+            color: $dark-blue;
+            font-size: 16px !important;
+        }
+    }
+} 
+
+.field-wrap {
+    padding: 10px;
+}
+

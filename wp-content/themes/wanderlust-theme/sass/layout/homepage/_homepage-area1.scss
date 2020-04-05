@@ -1,0 +1,71 @@
+.home {
+
+    .site-main {
+
+        .home-area1-wrapper {
+            
+            height: 46rem;
+
+            .home-area1 {
+                background: $yellow;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: 500px;
+                padding: 20px;
+
+                .area1-heading {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+    
+                    h1 {
+                        font-family: $font;
+                        color: $white;
+                        font-weight: 700;
+                        font-size: 3rem;
+                        text-transform: uppercase;
+                        margin-top: 10px;
+                    }
+                    
+                    h2 {
+                        font-family: $font;
+                        color: $white;
+                        font-weight: 700;
+                        font-size: 1.5rem;
+                        padding: 50px auto 5px auto;
+                        border-bottom: 3px solid $white;
+                        margin: 0;
+                    }
+
+                    .area1-download {
+        
+                        p {
+                            font-family: $font;
+                            color: $white;
+                            font-weight: 700;
+                            font-size: 1rem;
+                            text-transform: uppercase;
+                            text-align: center;
+                            letter-spacing: 1px;
+                        }
+        
+                        .area1-download-pics {
+                            display: flex;
+        
+                            figure {
+                                max-width: 170px;
+                                margin: 10px;
+                            }
+                        }
+                    }
+                }
+
+                .home-phone {
+                    max-width: 300px;
+                    padding-top: 30px;
+                }
+            }
+        }
+    }
+}

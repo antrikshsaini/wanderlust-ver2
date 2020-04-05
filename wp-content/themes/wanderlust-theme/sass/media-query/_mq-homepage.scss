@@ -1,0 +1,247 @@
+@media screen and (min-width: 650px) {
+
+    .home {
+        
+        .site-main {
+
+            /* Homepage Area 1 ===================== */
+
+            .home-area1-wrapper {
+                height: 33rem;
+                
+                .home-area1 {
+                    flex-direction: row;
+                    justify-content: center;
+
+                    .area1-heading {
+                        order: 2;
+
+                        .area1-download {
+                            padding-top: 30px;
+                        }
+                    }
+
+                    .home-phone {
+                    
+                        figure {
+                            max-width: 600px;
+                        }
+                    }
+                }
+            }
+
+
+            /* Homepage Area 2 ===================== */
+
+            .home-area2 {
+                max-width: 50rem;
+                margin: 0 auto;
+            }
+
+
+            /* Homepage Area 3 ===================== */
+
+            .home-area3 {
+                padding: 30px;
+
+                article {
+
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    align-items: center;
+
+                    h2 {
+                        font-size: 1.8rem;
+                    }
+
+                    p {
+                        font-size: 1.2rem;
+                    }
+                    
+
+                    &:nth-child(odd) {
+
+                        figure {
+                            grid-column: 2/3;
+                        }
+
+                        .area3-content {
+                            grid-column: 1/2;
+                            grid-row: 1;
+                        }
+                    }
+                }
+            }
+
+
+            /* Homepage Area 4 ===================== */
+
+            .home-area4 {
+
+                article {
+
+                    .number h2 {
+                        font-size: 9rem;
+                    } 
+
+                    h1 {
+                        font-size: 2.5rem;
+                    }
+
+                    p {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+
+            
+            /* Homepage Area 5 ===================== */
+
+            .home-area5 {
+
+                .area5-review {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    // max-width: 30rem;
+
+                    figure {
+                        max-width: 25rem;
+                    }
+
+                    .area5-review-content {
+
+                        h1 {
+                            font-size: 2rem;
+                        }
+
+                        h2 {
+                            font-size: 1rem;
+                        }
+
+                        .occupation {
+                            font-size: .8rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 800px) {
+
+    /* Homepage Area 5 ===================== */
+
+    .home-area5 {
+
+        .area5-review {
+            max-width: 55rem;
+            margin: 0 auto;
+
+            figure {
+                max-width: 25rem;
+            }
+
+            .area5-review-content {
+
+                h2 {
+                    font-size: 1.3rem !important;
+                }
+
+                
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 900px) {
+
+    /* Homepage Area 1 ===================== */
+
+    .home-area1-wrapper {
+        height: 34rem !important;
+
+        .home-area1 {
+            max-height: 430px;
+            padding-top: 10rem !important;
+
+            .area1-heading {
+                padding-bottom: 7rem;
+                padding-left: 5rem;
+                align-items: flex-start !important;
+
+                .area1-download {
+                    
+                    p {
+                        text-align: left !important;
+                    }
+
+                    .area1-download-pics {
+                        
+                        figure {
+                            margin: 10px 10px 10px 0 !important;
+                        }
+                    }
+                }
+            }
+
+            .home-phone {
+                max-width: 350px !important;
+            }
+        }
+    }
+
+    /* Homepage Area 3 ===================== */
+
+    .home-area3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 2rem;
+
+        article {
+            display: flex !important;
+            flex-direction: column;
+        }
+
+        .area3-heading {
+            grid-column: 1/-1;
+        }
+    }
+
+
+    /* Homepage Area 4 ===================== */
+
+    .home-area4 {
+
+        article {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-items: center;
+
+            figure {
+                margin: 0;
+            }
+
+            &.post-476,
+            &.post-478,
+            &.post-480 {
+            
+                .area4-content {
+                    padding-left: 20px;
+                }
+            }
+
+            &.post-477,
+            &.post-479 {
+
+                figure {
+                    order: 2;
+                }
+                
+                .area4-content {
+                    padding-right: 20px;
+                }
+            }
+        }
+    }
+}

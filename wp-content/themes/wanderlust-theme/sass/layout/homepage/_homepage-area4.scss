@@ -1,0 +1,122 @@
+.home-area4 {
+
+    .area4-heading {
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+
+    h1 {
+        font-family: $font;
+        color: $blue;
+        font-weight: 700;
+        font-size: 2rem;
+        text-transform: uppercase;
+        text-align: center;
+
+        &:first-child {
+            font-size: 2.5rem;
+        }
+    }
+
+    figure {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+
+        img {
+            max-height: 35rem;
+            width: auto;
+            transition: all 1s ease-in-out;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+
+    article {
+
+        .number h2 {
+            font-family: $font;
+            color: $light-grey;
+            font-weight: 700;
+            font-size: 7rem;
+            position: relative;
+            margin: 0;
+        }
+
+        &.post-476,
+        &.post-478,
+        &.post-480 {
+
+            .area4-content {
+                position: relative;
+                padding-left: 50px;
+
+                h1 {
+                    position: absolute;
+                    top: 20px;
+                    left: 70px;
+                    text-align: left;
+                    margin-right: 20px;
+                    font-weight: 800;
+                }
+
+                p {
+                    font-family: $font;
+                    color: $dark-blue;
+                    font-size: 1.3rem;
+                    line-height: 1.5;
+                    font-weight: 500;
+                    background-color: $light-grey;
+                    padding: 40px 40px 40px 50px;
+                    margin: 0;
+                    border-top-left-radius: 1.7rem;
+                    border-bottom-left-radius: 1.7rem;
+                }
+            }
+        }
+
+        &.post-477,
+        &.post-479 {
+
+            .area4-content {
+                position: relative;
+                padding-right: 40px;
+                text-align: right;
+        
+                h1 {
+                    position: absolute;
+                    top: 30px;
+                    right: 50px;
+                    text-align: right;
+                    margin-left: 20px;
+                    font-weight: 800;
+                }
+        
+                p {
+                    font-family: $font;
+                    color: $dark-blue;
+                    font-size: 1.3rem;
+                    line-height: 1.5;
+                    font-weight: 500;
+                    background-color: $light-grey;
+                    padding: 35px;
+                    margin: 0;
+                    border-top-right-radius: 1.7rem;
+                    border-bottom-right-radius: 1.7rem;
+                }
+            }
+        }
+
+        &:nth-child(2) h1,
+        &:nth-child(5) h1 {
+            color: $yellow;
+        }
+
+        &:nth-child(3) h1 {
+            color: $turquoise;
+        }   
+    }
+}

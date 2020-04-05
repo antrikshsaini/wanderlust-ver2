@@ -1,0 +1,53 @@
+.review-area5 {
+
+    article {
+        margin: 0 auto;
+        font-family: $font;
+        margin: 2.5rem auto;
+
+        .cta-thumbnail {
+        
+            text-align: center;
+    
+            img {
+                height: 35rem;
+                width: auto;
+            }
+    
+        }
+    
+        .cta-heading {
+    
+            text-align: center;
+            color: $blue;
+    
+            h2 {
+                font-weight: 800;
+                font-size: 1.6rem;
+            }
+    
+            p {
+                font-weight: 700;
+                font-size: 1.3rem;
+            }
+        }   
+    
+        .cta-buttons {
+                
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+    
+            a {
+                margin: .5rem;
+    
+                img {
+                    max-width: 9rem;
+                    height: auto; 
+                }
+            }
+    
+        }
+    
+    }
+}

@@ -1,0 +1,31 @@
+@media screen and (min-width: 650px) {
+
+    .site-footer {
+
+        .menu-primary {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            li {
+                margin: 1.2rem;
+
+                a {
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 900px) {
+    
+    .site-footer {
+
+        .menu-social-container {
+            margin: 0 15rem 20px 15rem;
+        }
+    }
+}

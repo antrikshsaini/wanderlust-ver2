@@ -1,0 +1,126 @@
+@media only screen and (min-width: 650px) {
+
+    /* Contact Area 1 ===================== */
+
+    .contact-area1 {
+    
+        .contact-area1-heading {  
+    
+            h1 {
+                font-size: 1.7rem !important;
+            }
+
+            h2 {
+                font-size: 1.3rem !important;  
+            }
+        }
+        
+        .contact-area1-intro {
+            font-size: .9rem !important;
+        }
+    }
+
+
+    /* Contact Form ===================== */
+
+    #nf-field-4-wrap{
+        display: flex;
+        justify-content: center;
+
+        .nf-field-element {
+            width: 270px !important;
+            text-align: center;
+        }
+    }
+
+
+}
+
+@media only screen and (min-width: 800px) {
+
+    /* Contact Area 1 ===================== */
+
+    .contact-area1 {
+
+        .contact-area1-content {
+            top: 30%;
+    
+            .contact-area1-heading {  
+    
+                h1 {
+                    font-size: 2rem !important;
+                }
+    
+                h2 {
+                    font-size: 1.5rem !important;  
+                }
+            }
+            
+            .contact-area1-intro {
+                font-size: 1rem !important;
+            }
+        }
+    }
+
+
+}
+
+
+
+@media only screen and (min-width: 1000px) {
+
+    /* Contact Area 1 ===================== */
+
+    .contact-area1 {
+
+        .contact-area1-content {
+            top: 30%;
+
+            .contact-area1-heading {  
+    
+                h1 {
+                    font-size: 3rem !important;
+                }
+    
+                h2 {
+                    font-size: 1.8rem !important;  
+                }
+            }
+            
+            .contact-area1-intro {
+                font-size: 1.4rem !important;
+            }
+        }
+    } 
+}
+
+
+
+@media only screen and (min-width: 1100px) {
+    
+    /********Contact Area2*************/
+    
+    .page-id-2 {
+
+        .wp-block-group {
+
+            .wp-block-group__inner-container {
+                margin: 4rem 0;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+
+                .contact-address {
+                    margin: 0 4rem;
+                }    
+
+            }  
+        }          
+    }
+
+    
+
+    
+    
+}
+

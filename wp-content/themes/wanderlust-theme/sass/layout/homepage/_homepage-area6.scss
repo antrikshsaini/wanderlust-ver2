@@ -1,0 +1,46 @@
+.home-area6  {
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .area6-heading {
+        margin-top: 3rem;
+
+        h1 {
+            font-family: $font;
+            color: $turquoise;
+            font-weight: 700;
+            font-size: 3rem;
+            text-align: center;
+            background-color: white;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+
+        h2 {
+            font-family: $font;
+            color: $turquoise;
+            font-weight: 700;
+            text-align: center;
+            // text-decoration: none;
+            font-size: 1.7rem;
+        }
+    }
+
+    button {
+        font-family: $font;
+        font-weight: 600;
+        font-size: 1rem;
+        padding: 1rem 4rem;
+        border-radius: .7rem;
+        border: none;
+        background-color: $yellow;
+        margin: 30px auto;
+
+        a {
+            color: $white !important;
+        }
+    }
+}

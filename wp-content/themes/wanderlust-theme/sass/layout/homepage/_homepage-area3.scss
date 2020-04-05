@@ -1,0 +1,65 @@
+.home-area3 {
+    padding: 20px;
+    background-color: $light-grey;
+
+    h1 {
+        font-family: $font;
+        color: $yellow;
+        font-weight: 700;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    article {
+
+        figure {
+            text-align: center;
+            margin: 0;
+            
+            img {
+                max-height: 25rem;
+                width: auto;
+                margin: 0 auto;
+                padding-top: 40px;
+            }
+        }
+
+        h2 {
+            font-family: $font;
+            font-weight: 700;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        p {
+            font-family: $font;
+            font-size: 1.2rem;
+            text-align: center;
+            line-height: 1.5;
+            color: $dark-blue;
+            margin: 20px;
+        }
+
+        &.post-468 {
+
+            h2 {
+                color: $turquoise;
+            }
+        }
+
+        &.post-469 {
+
+            h2 {
+                color: $blue;
+            }
+        }
+
+        &.post-470 {
+
+            h2 {
+                color: $yellow;
+            }
+        }
+    }
+}

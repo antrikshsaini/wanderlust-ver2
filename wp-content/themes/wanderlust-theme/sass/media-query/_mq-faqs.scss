@@ -1,0 +1,88 @@
+@media only screen and (min-width: 650px) {
+
+    /* Faq Area 1 ===================== */
+
+    .faq-area1 {
+    
+        .page-title {  
+    
+            h1 {
+                font-size: 1.7rem !important;
+            }
+
+            h2 {
+                font-size: 1.3rem !important;  
+            }
+        }
+        
+        .page-description {
+            font-size: .9rem !important;
+        }
+    }
+
+    .faq-popular-question, .faq-how-use {
+        max-width: 55rem;
+        margin: 0 auto !important;
+    }
+}
+
+
+@media only screen and (min-width: 800px) {
+
+    /* Faq Area 1 ===================== */
+
+    .faq-area1 {
+
+        .faq-banner-content {
+            top: 35%;
+    
+            .page-title {  
+    
+                h1 {
+                    font-size: 2rem !important;
+                }
+    
+                h2 {
+                    font-size: 1.5rem !important;  
+                }
+            }
+            
+            .page-description {
+                font-size: 1rem !important;
+            }
+        }
+    }
+
+    /* Faq Area 2 ===================== */
+
+    
+}
+
+
+@media only screen and (min-width: 1000px) {
+
+    /* Faq Area 1 ===================== */
+
+    .faq-area1 {
+
+        .faq-banner-content{
+            top: 30%;
+
+            .page-title {  
+    
+                h1 {
+                    font-size: 3rem !important;
+                }
+    
+                h2 {
+                    font-size: 1.8rem !important;  
+                }
+            }
+            
+            .page-description {
+                font-size: 1.4rem !important;
+            }
+        }
+    } 
+}
+

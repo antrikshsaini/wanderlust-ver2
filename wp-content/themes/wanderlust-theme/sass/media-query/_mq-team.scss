@@ -1,0 +1,131 @@
+@media only screen and (min-width: 650px) {
+
+    /* Team Area 1 ===================== */
+
+    .team-area1 {
+    
+        .page-title {  
+    
+            h1 {
+                font-size: 1.7rem !important;
+            }
+
+            h2 {
+                font-size: 1.3rem !important;  
+            }
+        }
+        
+        .page-description {
+            font-size: .9rem !important;
+        }
+    }
+
+    .team-area2 {
+
+        article {
+            margin: 30px;
+        }
+    }
+}
+
+@media only screen and (min-width: 800px) {
+
+    /* Team Area 1 ===================== */
+
+    .team-area1 {
+
+        .team-banner-content {
+            top: 30%;
+    
+            .page-title {  
+    
+                h1 {
+                    font-size: 2rem !important;
+                }
+    
+                h2 {
+                    font-size: 1.5rem !important;  
+                }
+            }
+            
+            .page-description {
+                font-size: 1rem !important;
+            }
+        }
+    }
+
+    .team-area2 {
+
+        article {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 2rem;
+            max-width: 70rem;
+            padding: 2rem 0;
+            margin: 0 auto;
+
+            .post-thumbnail {
+                max-width: 30rem;
+                transition: all .5s;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+
+            .member-info {
+                text-align: left;
+                margin: 0 30px;
+            }
+
+            &:nth-child(even) {
+
+                .post-thumbnail {
+                    grid-column: 2/3;
+                }
+    
+                .member-info {
+                    grid-column: 1/2;
+                    grid-row: 1;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media only screen and (min-width: 1000px) {
+
+    /* Contact Area 1 ===================== */
+
+    .team-area1 {
+
+        .team-banner-content {
+
+            .page-title {  
+    
+                h1 {
+                    font-size: 3rem !important;
+                }
+    
+                h2 {
+                    font-size: 1.8rem !important;  
+                }
+            }
+            
+            .page-description {
+                font-size: 1.4rem !important;
+            }
+        }
+    } 
+
+    .team-area2 {
+
+        article {
+            align-items: center;
+            justify-items: center;
+        }
+    }
+}
+

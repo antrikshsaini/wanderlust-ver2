@@ -1,0 +1,51 @@
+.team-area2 {
+
+    article {
+
+        .member-info {
+            text-align: center;
+            margin: 20px;
+
+            .member-name {
+                font-family: $font;
+                font-size: 2rem;
+                color: $blue;
+                font-weight: 700;
+            }
+
+            .member-role {
+                @extend .member-name;
+                font-size: 1.3rem;
+                font-weight: 500;
+                margin: .7rem 0;
+            }
+
+            .member-details {
+                @extend .member-name;
+                font-size: 1rem;
+                font-weight: 500;
+                color: $dark-blue;
+                line-height: 1.7;
+                margin: 2rem 0 4rem 0;
+            }
+        }
+    }
+
+    .post-268,
+    .post-258 {
+
+        .member-name,
+        .member-role {
+            color: $yellow !important;
+        }
+    }
+
+    .post-255,
+    .post-265 {
+
+        .member-name,
+        .member-role {
+            color: $turquoise !important;
+        }
+    }
+}

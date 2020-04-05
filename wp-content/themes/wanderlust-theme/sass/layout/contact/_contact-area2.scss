@@ -1,0 +1,56 @@
+.page-id-2 {
+
+    font-family: $font;
+
+    .contact-area2-heading {
+        text-align: center;
+        color: $yellow;
+        font-size: 41px;
+        font-weight: 900;
+        text-transform: uppercase;
+        margin-top: 5rem;
+        margin-bottom: 2rem;
+
+        
+    }
+
+    .wp-block-group {
+
+        .wp-block-group__inner-container {
+            margin: 2rem 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .contact-address {
+                padding: 0;
+                padding-bottom: 1rem;
+
+
+                li {
+                    font-size: 24px;
+                    color: #0088fd;
+                    font-weight: 900;
+                    line-height: 3.5rem;
+                    text-align: center;
+                    
+                }
+            }
+
+            .contact-area2-map {
+        
+                iframe {
+                    max-width: 100%;
+                    max-height: auto;
+                }
+        
+            }
+
+        }
+    }
+
+     
+
+    
+
+}

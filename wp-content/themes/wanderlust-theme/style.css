@@ -1,0 +1,2425 @@
+/*
+Theme Name: Wanderlust 
+Author: Team Cereal Killers
+Description: Theme for Wanderlust App
+Version: 1.0
+License: GNU General Public License v2 or later
+Text Domain: twentyseventeen
+Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+/* RESET STYLESHEET ================== */
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+     ========================================================================== */
+/**
+   * Remove the margin in all browsers.
+   */
+body {
+  margin: 0;
+}
+
+/**
+   * Render the `main` element consistently in IE.
+   */
+main {
+  display: block;
+}
+
+/**
+   * Correct the font size and margin on `h1` elements within `section` and
+   * `article` contexts in Chrome, Firefox, and Safari.
+   */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+     ========================================================================== */
+/**
+   * 1. Add the correct box sizing in Firefox.
+   * 2. Show the overflow in Edge and IE.
+   */
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+     ========================================================================== */
+/**
+   * Remove the gray background on active links in IE 10.
+   */
+a {
+  background-color: transparent;
+}
+
+/**
+   * 1. Remove the bottom border in Chrome 57-
+   * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+   */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+   * Add the correct font weight in Chrome, Edge, and Safari.
+   */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+   * Add the correct font size in all browsers.
+   */
+small {
+  font-size: 80%;
+}
+
+/**
+   * Prevent `sub` and `sup` elements from affecting the line height in
+   * all browsers.
+   */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+     ========================================================================== */
+/**
+   * Remove the border on images inside links in IE 10.
+   */
+img {
+  border-style: none;
+}
+
+/* Forms
+     ========================================================================== */
+/**
+   * 1. Change the font styles in all browsers.
+   * 2. Remove the margin in Firefox and Safari.
+   */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+   * Show the overflow in IE.
+   * 1. Show the overflow in Edge.
+   */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+   * Remove the inheritance of text transform in Edge, Firefox, and IE.
+   * 1. Remove the inheritance of text transform in Firefox.
+   */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+   * Correct the inability to style clickable types in iOS and Safari.
+   */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+   * Remove the inner border and padding in Firefox.
+   */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+   * Restore the focus styles unset by the previous rule.
+   */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+   * Correct the padding in Firefox.
+   */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+   * 1. Correct the text wrapping in Edge and IE.
+   * 2. Correct the color inheritance from `fieldset` elements in IE.
+   * 3. Remove the padding so developers are not caught out when they zero out
+   *    `fieldset` elements in all browsers.
+   */
+legend {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+   * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+   */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+   * Remove the default vertical scrollbar in IE 10+.
+   */
+textarea {
+  overflow: auto;
+}
+
+/**
+   * 1. Add the correct box sizing in IE 10.
+   * 2. Remove the padding in IE 10.
+   */
+[type="checkbox"],
+[type="radio"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+   * Correct the cursor style of increment and decrement buttons in Chrome.
+   */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+   * 1. Correct the odd appearance in Chrome and Safari.
+   * 2. Correct the outline style in Safari.
+   */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+   * Remove the inner padding in Chrome and Safari on macOS.
+   */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+   * 1. Correct the inability to style clickable types in iOS and Safari.
+   * 2. Change font properties to `inherit` in Safari.
+   */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+     ========================================================================== */
+/*
+   * Add the correct display in Edge, IE 10+, and Firefox.
+   */
+details {
+  display: block;
+}
+
+/*
+   * Add the correct display in all browsers.
+   */
+summary {
+  display: list-item;
+}
+
+/* Misc
+     ========================================================================== */
+/**
+   * Add the correct display in IE 10+.
+   */
+template {
+  display: none;
+}
+
+/**
+   * Add the correct display in IE 10.
+   */
+[hidden] {
+  display: none;
+}
+
+/* MEDIA ================== */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* TYPOGRAPHY ================== */
+/* ELEMENTS ================== */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font: "Montserrat", sans-serif;
+}
+
+* body {
+  margin: 0;
+  padding: 0;
+}
+
+* body li {
+  list-style-type: none;
+}
+
+* body a {
+  text-decoration: none;
+}
+
+/* FORMS ================== */
+.nf-form-cont {
+  font-family: "Montserrat", sans-serif;
+  margin: 55px 90px;
+}
+
+.nf-form-cont .nf-form-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.nf-form-cont .nf-form-title h3 {
+  color: #00c6af;
+  font-size: 41px;
+  font-weight: 900;
+  text-transform: uppercase;
+  display: inline-block;
+  padding-bottom: 6px;
+  margin: 0;
+}
+
+.nf-form-cont label {
+  color: #909090;
+  font-weight: lighter !important;
+  font-size: 16px !important;
+}
+
+.nf-form-cont input {
+  border: none !important;
+  border-bottom: 1px solid #909090 !important;
+  background-color: white !important;
+  height: 35px !important;
+  color: #0a1943 !important;
+  font-weight: 600;
+  padding: 0 !important;
+  font-size: 16px !important;
+}
+
+.nf-form-cont .nf-error .ninja-forms-field {
+  border-color: #0088fd !important;
+}
+
+.nf-form-cont .nf-error .nf-error-msg {
+  color: #0088fd;
+}
+
+.nf-form-cont .nf-error-field-errors {
+  text-align: center;
+}
+
+.nf-form-cont .nf-pass .ninja-forms-field {
+  border-color: #00c6af !important;
+}
+
+.nf-form-cont .nf-pass.field-wrap .nf-field-element:after {
+  right: 13px;
+}
+
+.nf-form-cont #nf-field-4-wrap .nf-field-element {
+  text-align: center;
+  background-color: #00c6af !important;
+  border-radius: 10px;
+}
+
+.nf-form-cont #nf-field-4-wrap .nf-field-element #nf-field-4 {
+  background-color: #00c6af !important;
+  color: white !important;
+  border: none !important;
+  margin: 5px auto;
+}
+
+.nf-form-cont .nf-form-content {
+  padding: 0;
+}
+
+.nf-form-cont .nf-form-fields-required {
+  margin: 50px auto;
+  text-align: center;
+}
+
+.nf-form-cont .field-wrap {
+  padding: 0;
+}
+
+.nf-pass.field-wrap .nf-field-element:after {
+  color: #00c6af !important;
+  line-height: 30px !important;
+}
+
+.nf-error.field-wrap .nf-field-element:after {
+  background: #0088fd !important;
+  top: inherit !important;
+  height: 45px !important;
+}
+
+.nf-error-msg, .ninja-forms-req-symbol {
+  color: #0088fd !important;
+}
+
+#nf-field-3-wrap .nf-field-element {
+  margin-top: 17px;
+}
+
+#nf-field-3-wrap .nf-field-element textarea {
+  background-color: white !important;
+  border-bottom: 1px solid #909090 !important;
+  color: #0a1943;
+  font-size: 16px !important;
+}
+
+.field-wrap {
+  padding: 10px;
+}
+
+/* LAYOUT ================== */
+#indicator {
+  width: 0;
+  height: 5px;
+  background: #00c6af;
+  position: fixed;
+  z-index: 9998;
+  top: 124px;
+  left: 0;
+}
+
+.site-header {
+  position: fixed;
+  background-color: white;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.site-header .site-branding {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.site-header .site-branding .menu-full {
+  display: none;
+}
+
+.site-header .site-branding .logo-wrapper {
+  margin: 20px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.site-header .site-branding .logo-wrapper img {
+  max-height: 5rem;
+  width: auto;
+}
+
+.site-header .site-branding .menu-button {
+  margin: 20px;
+  cursor: pointer;
+}
+
+.site-header .site-branding .menu-button .fas {
+  font-size: 2.5rem;
+  color: #0088fd;
+}
+
+.site-header .site-branding .menu-modal {
+  background-color: #0088fd;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  pointer-events: none;
+  padding: 40px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.site-header .site-branding .menu-modal .close {
+  display: block;
+  text-align: right;
+}
+
+.site-header .site-branding .menu-modal .close .close-button {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.site-header .site-branding .menu-modal .main-menu {
+  /* FONT AWESOME */
+}
+
+.site-header .site-branding .menu-modal .main-menu #menu-main {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2.5rem;
+}
+
+.site-header .site-branding .menu-modal .main-menu #menu-main li {
+  margin-bottom: 1.5em;
+}
+
+.site-header .site-branding .menu-modal .main-menu #menu-main li a {
+  font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  padding: 5px;
+  -webkit-transition: all .25s;
+  transition: all .25s;
+}
+
+.site-header .site-branding .menu-modal .main-menu #menu-main li:hover a {
+  border-bottom: 4px solid white;
+}
+
+.site-header .site-branding .menu-modal .main-menu p {
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+  text-transform: lowercase;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.site-header .site-branding .menu-modal .main-menu .menu-social-container #menu-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.site-header .site-branding .menu-modal .main-menu .menu-social-container #menu-social li {
+  margin: 20px;
+}
+
+.site-header .site-branding .menu-modal .main-menu .menu-social-container #menu-social .menu-item a::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: white;
+}
+
+.site-header .site-branding .menu-modal .main-menu .menu-social-container #menu-social #menu-item-16 a::before {
+  content: "\f081";
+}
+
+.site-header .site-branding .menu-modal .main-menu .menu-social-container #menu-social #menu-item-17 a::before {
+  content: "\f082";
+}
+
+.site-header .site-branding .menu-modal .main-menu .menu-social-container #menu-social #menu-item-18 a::before {
+  content: "\f0d3";
+}
+
+.site-header .site-branding .menu-modal .main-menu .menu-social-container #menu-social #menu-item-19 a::before {
+  content: "\f955";
+}
+
+.site-header .site-branding .menu-modal .main-menu .menu-social-container #menu-social .visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+.site-header .site-branding .menu-modal .main-menu .download-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 10px;
+}
+
+.site-header .site-branding .menu-modal .main-menu .download-buttons .ios-button a,
+.site-header .site-branding .menu-modal .main-menu .download-buttons .android-button a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20px;
+}
+
+.site-header .site-branding .menu-modal .main-menu .download-buttons .ios-button a img,
+.site-header .site-branding .menu-modal .main-menu .download-buttons .android-button a img {
+  max-width: 15rem;
+}
+
+.site-header .site-branding .active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  pointer-events: all;
+}
+
+/* Menu Active State ===================== */
+/* Home Page */
+.home .site-header .menu-full #menu-item-21 a {
+  border-bottom: 4px solid #0088fd;
+}
+
+/* Contact Page */
+.page-template-default.page-id-2 .site-header .menu-full #menu-item-418 a {
+  border-bottom: 4px solid #0088fd;
+}
+
+/* FAQs Page */
+.page-template.page-id-243 .site-header .menu-full #menu-item-305 a {
+  border-bottom: 4px solid #0088fd;
+}
+
+/* Reviews Page */
+.page-template.page-id-341 .site-header .menu-full #menu-item-343 a {
+  border-bottom: 4px solid #0088fd;
+}
+
+/* Our Team Page */
+.page-template.page-id-10 .site-header .menu-full #menu-item-332 a {
+  border-bottom: 4px solid #0088fd;
+}
+
+.site-main {
+  padding-top: 124px;
+}
+
+/* HOMEPAGE ================== */
+.home .site-main .home-area1-wrapper {
+  height: 46rem;
+}
+
+.home .site-main .home-area1-wrapper .home-area1 {
+  background: #f2ba00;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 500px;
+  padding: 20px;
+}
+
+.home .site-main .home-area1-wrapper .home-area1 .area1-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home .site-main .home-area1-wrapper .home-area1 .area1-heading h1 {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-weight: 700;
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+.home .site-main .home-area1-wrapper .home-area1 .area1-heading h2, .home .site-main .home-area1-wrapper .home-area1 .area1-heading .home-area5 .area5-review .area5-review-content .reviewer, .home-area5 .area5-review .area5-review-content .home .site-main .home-area1-wrapper .home-area1 .area1-heading .reviewer, .home .site-main .home-area1-wrapper .home-area1 .area1-heading .home-area5 .area5-review .area5-review-content .occupation, .home-area5 .area5-review .area5-review-content .home .site-main .home-area1-wrapper .home-area1 .area1-heading .occupation, .home .site-main .home-area1-wrapper .home-area1 .area1-heading .home-area5 .area5-review .area5-review-content a, .home-area5 .area5-review .area5-review-content .home .site-main .home-area1-wrapper .home-area1 .area1-heading a, .home .site-main .home-area1-wrapper .home-area1 .area1-heading .review-area3 article .area3-review-content .client-name, .review-area3 article .area3-review-content .home .site-main .home-area1-wrapper .home-area1 .area1-heading .client-name, .home .site-main .home-area1-wrapper .home-area1 .area1-heading .review-area3 article .area3-review-content .client-designation, .review-area3 article .area3-review-content .home .site-main .home-area1-wrapper .home-area1 .area1-heading .client-designation, .home .site-main .home-area1-wrapper .home-area1 .area1-heading .review-area3 article .area3-review-content .read-more-link a, .review-area3 article .area3-review-content .read-more-link .home .site-main .home-area1-wrapper .home-area1 .area1-heading a {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 50px auto 5px auto;
+  border-bottom: 3px solid white;
+  margin: 0;
+}
+
+.home .site-main .home-area1-wrapper .home-area1 .area1-heading .area1-download p {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.home .site-main .home-area1-wrapper .home-area1 .area1-heading .area1-download .area1-download-pics {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.home .site-main .home-area1-wrapper .home-area1 .area1-heading .area1-download .area1-download-pics figure {
+  max-width: 170px;
+  margin: 10px;
+}
+
+.home .site-main .home-area1-wrapper .home-area1 .home-phone {
+  max-width: 300px;
+  padding-top: 30px;
+}
+
+.home-area2 {
+  padding: 20px;
+}
+
+.home-area2 .area2-heading {
+  font-family: "Montserrat", sans-serif;
+  color: #00c6af;
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.home-area2 .area2-aboutapp {
+  text-align: center;
+  margin: 20px;
+}
+
+.home-area2 .area2-aboutapp p {
+  font-family: "Montserrat", sans-serif;
+  color: #0a1943;
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+.home-area2 .area2-aboutapp p:first-child {
+  font-weight: 700;
+}
+
+.home-area3 {
+  padding: 20px;
+  background-color: #f7f7f7;
+}
+
+.home-area3 h1 {
+  font-family: "Montserrat", sans-serif;
+  color: #f2ba00;
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.home-area3 article figure {
+  text-align: center;
+  margin: 0;
+}
+
+.home-area3 article figure img {
+  max-height: 25rem;
+  width: auto;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+.home-area3 article h2, .home-area3 article .home-area5 .area5-review .area5-review-content .reviewer, .home-area5 .area5-review .area5-review-content .home-area3 article .reviewer, .home-area3 article .home-area5 .area5-review .area5-review-content .occupation, .home-area5 .area5-review .area5-review-content .home-area3 article .occupation, .home-area3 article .home-area5 .area5-review .area5-review-content a, .home-area5 .area5-review .area5-review-content .home-area3 article a, .home-area3 .review-area3 article .area3-review-content .client-name, .review-area3 .home-area3 article .area3-review-content .client-name, .home-area3 .review-area3 article .area3-review-content .client-designation, .review-area3 .home-area3 article .area3-review-content .client-designation, .home-area3 .review-area3 article .area3-review-content .read-more-link a, .review-area3 .home-area3 article .area3-review-content .read-more-link a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.home-area3 article p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 1.5;
+  color: #0a1943;
+  margin: 20px;
+}
+
+.home-area3 article.post-468 h2, .home-area3 article.post-468 .home-area5 .area5-review .area5-review-content .reviewer, .home-area5 .area5-review .area5-review-content .home-area3 article.post-468 .reviewer, .home-area3 article.post-468 .home-area5 .area5-review .area5-review-content .occupation, .home-area5 .area5-review .area5-review-content .home-area3 article.post-468 .occupation, .home-area3 article.post-468 .home-area5 .area5-review .area5-review-content a, .home-area5 .area5-review .area5-review-content .home-area3 article.post-468 a, .home-area3 .review-area3 article.post-468 .area3-review-content .client-name, .review-area3 .home-area3 article.post-468 .area3-review-content .client-name, .home-area3 .review-area3 article.post-468 .area3-review-content .client-designation, .review-area3 .home-area3 article.post-468 .area3-review-content .client-designation, .home-area3 .review-area3 article.post-468 .area3-review-content .read-more-link a, .review-area3 .home-area3 article.post-468 .area3-review-content .read-more-link a {
+  color: #00c6af;
+}
+
+.home-area3 article.post-469 h2, .home-area3 article.post-469 .home-area5 .area5-review .area5-review-content .reviewer, .home-area5 .area5-review .area5-review-content .home-area3 article.post-469 .reviewer, .home-area3 article.post-469 .home-area5 .area5-review .area5-review-content .occupation, .home-area5 .area5-review .area5-review-content .home-area3 article.post-469 .occupation, .home-area3 article.post-469 .home-area5 .area5-review .area5-review-content a, .home-area5 .area5-review .area5-review-content .home-area3 article.post-469 a, .home-area3 .review-area3 article.post-469 .area3-review-content .client-name, .review-area3 .home-area3 article.post-469 .area3-review-content .client-name, .home-area3 .review-area3 article.post-469 .area3-review-content .client-designation, .review-area3 .home-area3 article.post-469 .area3-review-content .client-designation, .home-area3 .review-area3 article.post-469 .area3-review-content .read-more-link a, .review-area3 .home-area3 article.post-469 .area3-review-content .read-more-link a {
+  color: #0088fd;
+}
+
+.home-area3 article.post-470 h2, .home-area3 article.post-470 .home-area5 .area5-review .area5-review-content .reviewer, .home-area5 .area5-review .area5-review-content .home-area3 article.post-470 .reviewer, .home-area3 article.post-470 .home-area5 .area5-review .area5-review-content .occupation, .home-area5 .area5-review .area5-review-content .home-area3 article.post-470 .occupation, .home-area3 article.post-470 .home-area5 .area5-review .area5-review-content a, .home-area5 .area5-review .area5-review-content .home-area3 article.post-470 a, .home-area3 .review-area3 article.post-470 .area3-review-content .client-name, .review-area3 .home-area3 article.post-470 .area3-review-content .client-name, .home-area3 .review-area3 article.post-470 .area3-review-content .client-designation, .review-area3 .home-area3 article.post-470 .area3-review-content .client-designation, .home-area3 .review-area3 article.post-470 .area3-review-content .read-more-link a, .review-area3 .home-area3 article.post-470 .area3-review-content .read-more-link a {
+  color: #f2ba00;
+}
+
+.home-area4 .area4-heading {
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.home-area4 h1 {
+  font-family: "Montserrat", sans-serif;
+  color: #0088fd;
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.home-area4 h1:first-child {
+  font-size: 2.5rem;
+}
+
+.home-area4 figure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 50px;
+}
+
+.home-area4 figure img {
+  max-height: 35rem;
+  width: auto;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.home-area4 figure img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.home-area4 article .number h2, .home-area4 article .number .home-area5 .area5-review .area5-review-content .reviewer, .home-area5 .area5-review .area5-review-content .home-area4 article .number .reviewer, .home-area4 article .number .home-area5 .area5-review .area5-review-content .occupation, .home-area5 .area5-review .area5-review-content .home-area4 article .number .occupation, .home-area4 article .number .home-area5 .area5-review .area5-review-content a, .home-area5 .area5-review .area5-review-content .home-area4 article .number a, .home-area4 .review-area3 article .number .area3-review-content .client-name, .review-area3 .home-area4 article .number .area3-review-content .client-name, .home-area4 .review-area3 article .area3-review-content .number .client-name, .review-area3 .home-area4 article .area3-review-content .number .client-name, .home-area4 .review-area3 article .number .area3-review-content .client-designation, .review-area3 .home-area4 article .number .area3-review-content .client-designation, .home-area4 .review-area3 article .area3-review-content .number .client-designation, .review-area3 .home-area4 article .area3-review-content .number .client-designation, .home-area4 .review-area3 article .number .area3-review-content .read-more-link a, .review-area3 .home-area4 article .number .area3-review-content .read-more-link a, .home-area4 .review-area3 article .area3-review-content .read-more-link .number a, .review-area3 .home-area4 article .area3-review-content .read-more-link .number a {
+  font-family: "Montserrat", sans-serif;
+  color: #f7f7f7;
+  font-weight: 700;
+  font-size: 7rem;
+  position: relative;
+  margin: 0;
+}
+
+.home-area4 article.post-476 .area4-content, .home-area4 article.post-478 .area4-content, .home-area4 article.post-480 .area4-content {
+  position: relative;
+  padding-left: 50px;
+}
+
+.home-area4 article.post-476 .area4-content h1, .home-area4 article.post-478 .area4-content h1, .home-area4 article.post-480 .area4-content h1 {
+  position: absolute;
+  top: 20px;
+  left: 70px;
+  text-align: left;
+  margin-right: 20px;
+  font-weight: 800;
+}
+
+.home-area4 article.post-476 .area4-content p, .home-area4 article.post-478 .area4-content p, .home-area4 article.post-480 .area4-content p {
+  font-family: "Montserrat", sans-serif;
+  color: #0a1943;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  font-weight: 500;
+  background-color: #f7f7f7;
+  padding: 40px 40px 40px 50px;
+  margin: 0;
+  border-top-left-radius: 1.7rem;
+  border-bottom-left-radius: 1.7rem;
+}
+
+.home-area4 article.post-477 .area4-content, .home-area4 article.post-479 .area4-content {
+  position: relative;
+  padding-right: 40px;
+  text-align: right;
+}
+
+.home-area4 article.post-477 .area4-content h1, .home-area4 article.post-479 .area4-content h1 {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  text-align: right;
+  margin-left: 20px;
+  font-weight: 800;
+}
+
+.home-area4 article.post-477 .area4-content p, .home-area4 article.post-479 .area4-content p {
+  font-family: "Montserrat", sans-serif;
+  color: #0a1943;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  font-weight: 500;
+  background-color: #f7f7f7;
+  padding: 35px;
+  margin: 0;
+  border-top-right-radius: 1.7rem;
+  border-bottom-right-radius: 1.7rem;
+}
+
+.home-area4 article:nth-child(2) h1,
+.home-area4 article:nth-child(5) h1 {
+  color: #f2ba00;
+}
+
+.home-area4 article:nth-child(3) h1 {
+  color: #00c6af;
+}
+
+.home-area5 .area5-heading {
+  padding-top: 30px;
+}
+
+.home-area5 .area5-heading h1 {
+  font-family: "Montserrat", sans-serif;
+  color: #0088fd;
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.home-area5 .area5-review {
+  background-color: #f7f7f7;
+}
+
+.home-area5 .area5-review figure {
+  margin: 0;
+}
+
+.home-area5 .area5-review .area5-review-content {
+  padding: 40px;
+}
+
+.home-area5 .area5-review .area5-review-content h1 {
+  font-family: "Montserrat", sans-serif;
+  color: #0a1943;
+  font-weight: 700;
+  font-size: 3rem;
+  margin: 0;
+}
+
+.home-area5 .area5-review .area5-review-content h2, .home-area5 .area5-review .area5-review-content .reviewer, .home-area5 .area5-review .area5-review-content .occupation, .home-area5 .area5-review .area5-review-content a, .home-area5 .area5-review .area5-review-content .review-area3 article .area3-review-content .client-name, .review-area3 article .area3-review-content .home-area5 .area5-review .area5-review-content .client-name, .home-area5 .area5-review .area5-review-content .review-area3 article .area3-review-content .client-designation, .review-area3 article .area3-review-content .home-area5 .area5-review .area5-review-content .client-designation, .home-area5 .area5-review .area5-review-content .review-area3 article .area3-review-content .read-more-link a, .review-area3 article .area3-review-content .read-more-link .home-area5 .area5-review .area5-review-content a {
+  font-family: "Montserrat", sans-serif;
+  color: #0a1943;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.home-area5 .area5-review .area5-review-content .reviewer, .home-area5 .area5-review .area5-review-content .occupation, .home-area5 .area5-review .area5-review-content a {
+  font-weight: 500;
+  padding-top: 30px;
+}
+
+.home-area5 .area5-review .area5-review-content .occupation, .home-area5 .area5-review .area5-review-content a {
+  font-size: 1.2rem;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.home-area5 .area5-review .area5-review-content a {
+  color: #0088fd;
+  border-bottom: 2px solid #0088fd;
+  padding-bottom: 5px;
+}
+
+.home-area6 {
+  padding: 20px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home-area6 .area6-heading {
+  margin-top: 3rem;
+}
+
+.home-area6 .area6-heading h1 {
+  font-family: "Montserrat", sans-serif;
+  color: #00c6af;
+  font-weight: 700;
+  font-size: 3rem;
+  text-align: center;
+  background-color: white;
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
+.home-area6 .area6-heading h2, .home-area6 .area6-heading .home-area5 .area5-review .area5-review-content .reviewer, .home-area5 .area5-review .area5-review-content .home-area6 .area6-heading .reviewer, .home-area6 .area6-heading .home-area5 .area5-review .area5-review-content .occupation, .home-area5 .area5-review .area5-review-content .home-area6 .area6-heading .occupation, .home-area6 .area6-heading .home-area5 .area5-review .area5-review-content a, .home-area5 .area5-review .area5-review-content .home-area6 .area6-heading a, .home-area6 .area6-heading .review-area3 article .area3-review-content .client-name, .review-area3 article .area3-review-content .home-area6 .area6-heading .client-name, .home-area6 .area6-heading .review-area3 article .area3-review-content .client-designation, .review-area3 article .area3-review-content .home-area6 .area6-heading .client-designation, .home-area6 .area6-heading .review-area3 article .area3-review-content .read-more-link a, .review-area3 article .area3-review-content .read-more-link .home-area6 .area6-heading a {
+  font-family: "Montserrat", sans-serif;
+  color: #00c6af;
+  font-weight: 700;
+  text-align: center;
+  font-size: 1.7rem;
+}
+
+.home-area6 button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 1rem 4rem;
+  border-radius: .7rem;
+  border: none;
+  background-color: #f2ba00;
+  margin: 30px auto;
+}
+
+.home-area6 button a {
+  color: white !important;
+}
+
+/* CONTACT ================== */
+.contact-area1 {
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.contact-area1 .wp-block-image {
+  margin: 0;
+}
+
+.contact-area1 .contact-area1-content {
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  left: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact-area1 .contact-area1-content .contact-area1-heading h1 {
+  color: #0a1943;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 5px;
+  margin: 10px;
+  border-bottom: 2.5px solid #0a1943;
+}
+
+.contact-area1 .contact-area1-content .contact-area1-heading h2, .contact-area1 .contact-area1-content .contact-area1-heading .home-area5 .area5-review .area5-review-content .reviewer, .home-area5 .area5-review .area5-review-content .contact-area1 .contact-area1-content .contact-area1-heading .reviewer, .contact-area1 .contact-area1-content .contact-area1-heading .home-area5 .area5-review .area5-review-content .occupation, .home-area5 .area5-review .area5-review-content .contact-area1 .contact-area1-content .contact-area1-heading .occupation, .contact-area1 .contact-area1-content .contact-area1-heading .home-area5 .area5-review .area5-review-content a, .home-area5 .area5-review .area5-review-content .contact-area1 .contact-area1-content .contact-area1-heading a, .contact-area1 .contact-area1-content .contact-area1-heading .review-area3 article .area3-review-content .client-name, .review-area3 article .area3-review-content .contact-area1 .contact-area1-content .contact-area1-heading .client-name, .contact-area1 .contact-area1-content .contact-area1-heading .review-area3 article .area3-review-content .client-designation, .review-area3 article .area3-review-content .contact-area1 .contact-area1-content .contact-area1-heading .client-designation, .contact-area1 .contact-area1-content .contact-area1-heading .review-area3 article .area3-review-content .read-more-link a, .review-area3 article .area3-review-content .read-more-link .contact-area1 .contact-area1-content .contact-area1-heading a {
+  color: #0a1943;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.contact-area1 .contact-area1-content .contact-area1-intro {
+  font-size: .7rem;
+  text-align: center;
+  line-height: 1.5;
+  font-family: 700;
+}
+
+.page-id-2 {
+  font-family: "Montserrat", sans-serif;
+}
+
+.page-id-2 .contact-area2-heading {
+  text-align: center;
+  color: #f2ba00;
+  font-size: 41px;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+
+.page-id-2 .wp-block-group .wp-block-group__inner-container {
+  margin: 2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page-id-2 .wp-block-group .wp-block-group__inner-container .contact-address {
+  padding: 0;
+  padding-bottom: 1rem;
+}
+
+.page-id-2 .wp-block-group .wp-block-group__inner-container .contact-address li {
+  font-size: 24px;
+  color: #0088fd;
+  font-weight: 900;
+  line-height: 3.5rem;
+  text-align: center;
+}
+
+.page-id-2 .wp-block-group .wp-block-group__inner-container .contact-area2-map iframe {
+  max-width: 100%;
+  max-height: auto;
+}
+
+/* TEAM ================== */
+.team-area1 {
+  position: relative;
+}
+
+.team-area1 .team-banner-content {
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  left: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.team-area1 .team-banner-content .page-title h1 {
+  font-family: "Montserrat", sans-serif;
+  color: #0a1943;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 5px;
+  margin: 10px;
+  border-bottom: 2.5px solid #0a1943;
+}
+
+.team-area1 .team-banner-content .page-title h2, .team-area1 .team-banner-content .page-title .home-area5 .area5-review .area5-review-content .reviewer, .home-area5 .area5-review .area5-review-content .team-area1 .team-banner-content .page-title .reviewer, .team-area1 .team-banner-content .page-title .home-area5 .area5-review .area5-review-content .occupation, .home-area5 .area5-review .area5-review-content .team-area1 .team-banner-content .page-title .occupation, .team-area1 .team-banner-content .page-title .home-area5 .area5-review .area5-review-content a, .home-area5 .area5-review .area5-review-content .team-area1 .team-banner-content .page-title a, .team-area1 .team-banner-content .page-title .review-area3 article .area3-review-content .client-name, .review-area3 article .area3-review-content .team-area1 .team-banner-content .page-title .client-name, .team-area1 .team-banner-content .page-title .review-area3 article .area3-review-content .client-designation, .review-area3 article .area3-review-content .team-area1 .team-banner-content .page-title .client-designation, .team-area1 .team-banner-content .page-title .review-area3 article .area3-review-content .read-more-link a, .review-area3 article .area3-review-content .read-more-link .team-area1 .team-banner-content .page-title a {
+  font-family: "Montserrat", sans-serif;
+  color: #0a1943;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.team-area1 .team-banner-content .page-description {
+  font-family: "Montserrat", sans-serif;
+  font-size: .7rem;
+  text-align: center;
+  line-height: 1.5;
+  font-family: 700;
+}
+
+.team-area2 article .member-info {
+  text-align: center;
+  margin: 20px;
+}
+
+.team-area2 article .member-info .member-name, .team-area2 article .member-info .member-role, .team-area2 article .member-info .member-details {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  color: #0088fd;
+  font-weight: 700;
+}
+
+.team-area2 article .member-info .member-role {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: .7rem 0;
+}
+
+.team-area2 article .member-info .member-details {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #0a1943;
+  line-height: 1.7;
+  margin: 2rem 0 4rem 0;
+}
+
+.team-area2 .post-268 .member-name, .team-area2 .post-268 article .member-info .member-role, .team-area2 article .member-info .post-268 .member-role, .team-area2 .post-268 article .member-info .member-details, .team-area2 article .member-info .post-268 .member-details,
+.team-area2 .post-268 .member-role,
+.team-area2 .post-258 .member-name,
+.team-area2 .post-258 article .member-info .member-role,
+.team-area2 article .member-info .post-258 .member-role,
+.team-area2 .post-258 article .member-info .member-details,
+.team-area2 article .member-info .post-258 .member-details,
+.team-area2 .post-258 .member-role {
+  color: #f2ba00 !important;
+}
+
+.team-area2 .post-255 .member-name, .team-area2 .post-255 article .member-info .member-role, .team-area2 article .member-info .post-255 .member-role, .team-area2 .post-255 article .member-info .member-details, .team-area2 article .member-info .post-255 .member-details,
+.team-area2 .post-255 .member-role,
+.team-area2 .post-265 .member-name,
+.team-area2 .post-265 article .member-info .member-role,
+.team-area2 article .member-info .post-265 .member-role,
+.team-area2 .post-265 article .member-info .member-details,
+.team-area2 article .member-info .post-265 .member-details,
+.team-area2 .post-265 .member-role {
+  color: #00c6af !important;
+}
+
+/* FAQs ================== */
+.faq-area1 {
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.faq-area1 .wp-block-image {
+  margin: 0;
+}
+
+.faq-area1 .faq-banner-content {
+  position: absolute;
+  top: 30%;
+  right: 10%;
+  left: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.faq-area1 .faq-banner-content .page-title h1 {
+  color: #0a1943;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 5px;
+  margin: 10px;
+  border-bottom: 2.5px solid #0a1943;
+}
+
+.faq-area1 .faq-banner-content .page-title h2, .faq-area1 .faq-banner-content .page-title .home-area5 .area5-review .area5-review-content .reviewer, .home-area5 .area5-review .area5-review-content .faq-area1 .faq-banner-content .page-title .reviewer, .faq-area1 .faq-banner-content .page-title .home-area5 .area5-review .area5-review-content .occupation, .home-area5 .area5-review .area5-review-content .faq-area1 .faq-banner-content .page-title .occupation, .faq-area1 .faq-banner-content .page-title .home-area5 .area5-review .area5-review-content a, .home-area5 .area5-review .area5-review-content .faq-area1 .faq-banner-content .page-title a, .faq-area1 .faq-banner-content .page-title .review-area3 article .area3-review-content .client-name, .review-area3 article .area3-review-content .faq-area1 .faq-banner-content .page-title .client-name, .faq-area1 .faq-banner-content .page-title .review-area3 article .area3-review-content .client-designation, .review-area3 article .area3-review-content .faq-area1 .faq-banner-content .page-title .client-designation, .faq-area1 .faq-banner-content .page-title .review-area3 article .area3-review-content .read-more-link a, .review-area3 article .area3-review-content .read-more-link .faq-area1 .faq-banner-content .page-title a {
+  color: #0a1943;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.faq-area1 .faq-banner-content .page-description {
+  font-size: .7rem;
+  text-align: center;
+  line-height: 1.5;
+  font-family: 700;
+}
+
+.page-template-custom-post-type-faq-template {
+  font-family: "Montserrat", sans-serif;
+}
+
+.page-template-custom-post-type-faq-template .faq-popular-question, .page-template-custom-post-type-faq-template .faq-how-use {
+  margin: 0 3rem;
+}
+
+.page-template-custom-post-type-faq-template .faq-popular-question article, .page-template-custom-post-type-faq-template .faq-how-use article {
+  border-bottom: 1px solid #e6e6e6;
+  padding: 2rem 0;
+}
+
+.page-template-custom-post-type-faq-template .faq-popular-question article:last-child, .page-template-custom-post-type-faq-template .faq-how-use article:last-child {
+  border: none;
+}
+
+.page-template-custom-post-type-faq-template .customposttype1-title h1, .page-template-custom-post-type-faq-template .customposttype2-title h1 {
+  text-align: center;
+  font-weight: 900;
+  margin: 1rem 1rem;
+  margin-top: 3rem;
+  font-size: 38px;
+}
+
+.page-template-custom-post-type-faq-template .customposttype1-title h1 {
+  color: #00c6af;
+  padding-top: 1rem;
+}
+
+.page-template-custom-post-type-faq-template .customposttype2-title h1 {
+  color: #f2ba00;
+}
+
+.page-template-custom-post-type-faq-template .faq-post-question, .page-template-custom-post-type-faq-template .faq-post-answer {
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.page-template-custom-post-type-faq-template .faq-post-question p, .page-template-custom-post-type-faq-template .faq-post-answer p {
+  margin: 0;
+  padding: 10px;
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+  position: absolute;
+  font-weight: 400;
+  font-size: 16px;
+  left: 0;
+  line-height: 1.7;
+}
+
+.page-template-custom-post-type-faq-template .faq-post-question {
+  color: #0088fd;
+  font-size: 26px;
+  font-weight: 900;
+  padding: 2rem 3rem;
+}
+
+.page-template-custom-post-type-faq-template .faq-post-question p {
+  background-color: #e6e6e6;
+}
+
+.page-template-custom-post-type-faq-template .faq-post-answer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #909090;
+  font-size: 18px;
+  line-height: 1.7;
+  padding: 0 3rem;
+  padding-top: 0rem;
+  padding-bottom: 2rem;
+}
+
+.page-template-custom-post-type-faq-template .faq-post-answer p {
+  background-color: #f2ba00;
+}
+
+.page-template-custom-post-type-faq-template .faq-post-answer ol {
+  padding: 0;
+}
+
+/* REVIEWS ================== */
+.review-area1 {
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.review-area1 figure {
+  margin: 0;
+}
+
+.review-area1 .review-area1-content {
+  position: absolute;
+  top: 30%;
+  right: 10%;
+  left: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.review-area1 .review-area1-content .review-area1-heading h1 {
+  color: #0a1943;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 5px;
+  margin: 10px;
+  border-bottom: 2.5px solid #0a1943;
+}
+
+.review-area1 .review-area1-content .review-area1-heading h2, .review-area1 .review-area1-content .review-area1-heading .home-area5 .area5-review .area5-review-content .reviewer, .home-area5 .area5-review .area5-review-content .review-area1 .review-area1-content .review-area1-heading .reviewer, .review-area1 .review-area1-content .review-area1-heading .home-area5 .area5-review .area5-review-content .occupation, .home-area5 .area5-review .area5-review-content .review-area1 .review-area1-content .review-area1-heading .occupation, .review-area1 .review-area1-content .review-area1-heading .home-area5 .area5-review .area5-review-content a, .home-area5 .area5-review .area5-review-content .review-area1 .review-area1-content .review-area1-heading a, .review-area1 .review-area1-content .review-area1-heading .review-area3 article .area3-review-content .client-name, .review-area3 article .area3-review-content .review-area1 .review-area1-content .review-area1-heading .client-name, .review-area1 .review-area1-content .review-area1-heading .review-area3 article .area3-review-content .client-designation, .review-area3 article .area3-review-content .review-area1 .review-area1-content .review-area1-heading .client-designation, .review-area1 .review-area1-content .review-area1-heading .review-area3 article .area3-review-content .read-more-link a, .review-area3 article .area3-review-content .read-more-link .review-area1 .review-area1-content .review-area1-heading a {
+  color: #0a1943;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.review-area1 .review-area1-content .review-area1-intro {
+  font-size: .7rem;
+  text-align: center;
+  line-height: 1.5;
+  font-family: 700;
+}
+
+.review-area2 {
+  font-family: "Montserrat", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 4rem 2rem;
+  border: 1px solid #f2ba00;
+  border-radius: 13px;
+  padding: 2rem;
+  max-width: 60rem;
+}
+
+.review-area2 .review-app-intro h2, .review-area2 .review-app-intro .home-area5 .area5-review .area5-review-content .reviewer, .home-area5 .area5-review .area5-review-content .review-area2 .review-app-intro .reviewer, .review-area2 .review-app-intro .home-area5 .area5-review .area5-review-content .occupation, .home-area5 .area5-review .area5-review-content .review-area2 .review-app-intro .occupation, .review-area2 .review-app-intro .home-area5 .area5-review .area5-review-content a, .home-area5 .area5-review .area5-review-content .review-area2 .review-app-intro a, .review-area2 .review-app-intro .review-area3 article .area3-review-content .client-name, .review-area3 article .area3-review-content .review-area2 .review-app-intro .client-name, .review-area2 .review-app-intro .review-area3 article .area3-review-content .client-designation, .review-area3 article .area3-review-content .review-area2 .review-app-intro .client-designation, .review-area2 .review-app-intro .review-area3 article .area3-review-content .read-more-link a, .review-area3 article .area3-review-content .read-more-link .review-area2 .review-app-intro a {
+  color: #0a1943;
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1.5;
+  margin-top: 0;
+}
+
+.review-area2 .review-app-intro p {
+  color: #0a1943;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.review-area2 .review-app-intro a {
+  color: #0088fd;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.review-area3 .review-title-posts {
+  text-align: center;
+  margin: 4rem 0;
+}
+
+.review-area3 .review-title-posts h1 {
+  font-weight: 900;
+  color: #f2ba00;
+  font-size: 2.5rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.review-area3 article {
+  background-color: #f7f7f7;
+  margin-top: 3.5rem;
+}
+
+.review-area3 article figure {
+  margin: 0;
+}
+
+.review-area3 article figure img {
+  display: block;
+}
+
+.review-area3 article .area3-review-content {
+  padding: 40px;
+}
+
+.review-area3 article .area3-review-content h1 {
+  font-family: "Montserrat", sans-serif;
+  color: #0a1943;
+  font-weight: 700;
+  font-size: 3rem;
+  margin: 0;
+}
+
+.review-area3 article .area3-review-content h2, .review-area3 article .area3-review-content .home-area5 .area5-review .area5-review-content .reviewer, .home-area5 .area5-review .area5-review-content .review-area3 article .area3-review-content .reviewer, .review-area3 article .area3-review-content .home-area5 .area5-review .area5-review-content .occupation, .home-area5 .area5-review .area5-review-content .review-area3 article .area3-review-content .occupation, .review-area3 article .area3-review-content .home-area5 .area5-review .area5-review-content a, .home-area5 .area5-review .area5-review-content .review-area3 article .area3-review-content a, .review-area3 article .area3-review-content .client-name, .review-area3 article .area3-review-content .client-designation, .review-area3 article .area3-review-content .read-more-link a {
+  font-family: "Montserrat", sans-serif;
+  color: #0a1943;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+.review-area3 article .area3-review-content .client-name, .review-area3 article .area3-review-content .client-designation, .review-area3 article .area3-review-content .read-more-link a {
+  font-weight: 500;
+  padding-top: 30px;
+}
+
+.review-area3 article .area3-review-content .client-designation, .review-area3 article .area3-review-content .read-more-link a {
+  font-size: 1.2rem;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.review-area3 article .area3-review-content .read-more-link a {
+  border-bottom: 2px solid #0a1943;
+  font-weight: 700;
+}
+
+.review-area4 .rate-title-posts {
+  text-align: center;
+  margin: 4rem 0;
+}
+
+.review-area4 .rate-title-posts h1 {
+  color: #0088fd;
+  font-size: 2.5rem;
+  font-weight: 900;
+  font-family: "Montserrat", sans-serif;
+}
+
+.review-area4 .rate-content {
+  background-color: #00c6af;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 3rem 0;
+}
+
+.review-area4 .rate-content article {
+  color: white;
+  padding: 1rem 0;
+}
+
+.review-area4 .rate-content article h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  font-family: "Montserrat", sans-serif;
+  margin: 1rem 0 2rem 0;
+}
+
+.review-area4 .rate-content article h2, .review-area4 .rate-content article .home-area5 .area5-review .area5-review-content .reviewer, .home-area5 .area5-review .area5-review-content .review-area4 .rate-content article .reviewer, .review-area4 .rate-content article .home-area5 .area5-review .area5-review-content .occupation, .home-area5 .area5-review .area5-review-content .review-area4 .rate-content article .occupation, .review-area4 .rate-content article .home-area5 .area5-review .area5-review-content a, .home-area5 .area5-review .area5-review-content .review-area4 .rate-content article a, .review-area4 .rate-content .review-area3 article .area3-review-content .client-name, .review-area3 .review-area4 .rate-content article .area3-review-content .client-name, .review-area4 .rate-content .review-area3 article .area3-review-content .client-designation, .review-area3 .review-area4 .rate-content article .area3-review-content .client-designation, .review-area4 .rate-content .review-area3 article .area3-review-content .read-more-link a, .review-area3 .review-area4 .rate-content article .area3-review-content .read-more-link a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  margin: 1rem 0;
+}
+
+.review-area4 .rate-content article p {
+  font-weight: 600;
+  font-size: 1.3rem;
+  font-family: "Montserrat", sans-serif;
+  margin: 1rem 0;
+}
+
+.review-area5 article {
+  margin: 0 auto;
+  font-family: "Montserrat", sans-serif;
+  margin: 2.5rem auto;
+}
+
+.review-area5 article .cta-thumbnail {
+  text-align: center;
+}
+
+.review-area5 article .cta-thumbnail img {
+  height: 35rem;
+  width: auto;
+}
+
+.review-area5 article .cta-heading {
+  text-align: center;
+  color: #0088fd;
+}
+
+.review-area5 article .cta-heading h2, .review-area5 article .cta-heading .home-area5 .area5-review .area5-review-content .reviewer, .home-area5 .area5-review .area5-review-content .review-area5 article .cta-heading .reviewer, .review-area5 article .cta-heading .home-area5 .area5-review .area5-review-content .occupation, .home-area5 .area5-review .area5-review-content .review-area5 article .cta-heading .occupation, .review-area5 article .cta-heading .home-area5 .area5-review .area5-review-content a, .home-area5 .area5-review .area5-review-content .review-area5 article .cta-heading a, .review-area5 .review-area3 article .cta-heading .area3-review-content .client-name, .review-area3 .review-area5 article .cta-heading .area3-review-content .client-name, .review-area5 .review-area3 article .area3-review-content .cta-heading .client-name, .review-area3 .review-area5 article .area3-review-content .cta-heading .client-name, .review-area5 .review-area3 article .cta-heading .area3-review-content .client-designation, .review-area3 .review-area5 article .cta-heading .area3-review-content .client-designation, .review-area5 .review-area3 article .area3-review-content .cta-heading .client-designation, .review-area3 .review-area5 article .area3-review-content .cta-heading .client-designation, .review-area5 .review-area3 article .cta-heading .area3-review-content .read-more-link a, .review-area3 .review-area5 article .cta-heading .area3-review-content .read-more-link a, .review-area5 .review-area3 article .area3-review-content .read-more-link .cta-heading a, .review-area3 .review-area5 article .area3-review-content .read-more-link .cta-heading a {
+  font-weight: 800;
+  font-size: 1.6rem;
+}
+
+.review-area5 article .cta-heading p {
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.review-area5 article .cta-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.review-area5 article .cta-buttons a {
+  margin: .5rem;
+}
+
+.review-area5 article .cta-buttons a img {
+  max-width: 9rem;
+  height: auto;
+}
+
+.site-footer {
+  background-color: #0088fd;
+  color: white;
+  padding: 20px;
+  margin-top: 50px;
+  /* FONT AWESOME */
+}
+
+.site-footer .menu-main-container .menu-primary {
+  padding: 0;
+  margin: 0;
+}
+
+.site-footer .menu-main-container .menu-primary li {
+  margin-bottom: 2.3rem;
+  text-align: center;
+}
+
+.site-footer .menu-main-container .menu-primary li a {
+  font-size: 1.2rem;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-weight: 700;
+  padding: 10px;
+  -webkit-transition: all .25s;
+  transition: all .25s;
+  border-bottom: 4px solid #0088fd;
+}
+
+.site-footer .menu-main-container .menu-primary li:hover a {
+  border-bottom: 4px solid white;
+}
+
+.site-footer .menu-social-container {
+  border-bottom: 2px solid white;
+  margin: 0 30px 20px 30px;
+  padding-bottom: 10px;
+}
+
+.site-footer .menu-social-container #menu-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.site-footer .menu-social-container #menu-social li {
+  margin: 20px;
+}
+
+.site-footer .menu-social-container #menu-social .menu-item a::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: white;
+}
+
+.site-footer .menu-social-container #menu-social .menu-item-16 a::before {
+  content: "\f081";
+  color: white;
+}
+
+.site-footer .menu-social-container #menu-social .menu-item-17 a::before {
+  content: "\f082";
+}
+
+.site-footer .menu-social-container #menu-social .menu-item-18 a::before {
+  content: "\f0d3";
+}
+
+.site-footer .menu-social-container #menu-social .menu-item-19 a::before {
+  content: "\f955";
+}
+
+.site-footer .menu-social-container #menu-social .visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+.site-footer p {
+  text-align: center;
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+/* MEDIA QUERY ================== */
+@media screen and (min-width: 900px) {
+  .site-header .logo-wrapper {
+    margin-left: 30px !important;
+  }
+  .site-header .menu-full {
+    display: block !important;
+  }
+  .site-header .menu-full #menu-main {
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .site-header .menu-full #menu-main li {
+    margin-right: 30px;
+  }
+  .site-header .menu-full #menu-main li a {
+    font-size: 1.2rem;
+    font-family: "Montserrat", sans-serif;
+    color: #0088fd;
+    font-weight: 700;
+    padding: 10px;
+    -webkit-transition: all .25s;
+    transition: all .25s;
+  }
+  .site-header .menu-full #menu-main li:hover a {
+    border-bottom: 4px solid #0088fd;
+  }
+  .site-header .menu-button,
+  .site-header .menu-modal {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .site-footer .menu-primary {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .site-footer .menu-primary li {
+    margin: 1.2rem;
+  }
+  .site-footer .menu-primary li a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .site-footer .menu-social-container {
+    margin: 0 15rem 20px 15rem;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .home .site-main {
+    /* Homepage Area 1 ===================== */
+    /* Homepage Area 2 ===================== */
+    /* Homepage Area 3 ===================== */
+    /* Homepage Area 4 ===================== */
+    /* Homepage Area 5 ===================== */
+  }
+  .home .site-main .home-area1-wrapper {
+    height: 33rem;
+  }
+  .home .site-main .home-area1-wrapper .home-area1 {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .home .site-main .home-area1-wrapper .home-area1 .area1-heading {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .home .site-main .home-area1-wrapper .home-area1 .area1-heading .area1-download {
+    padding-top: 30px;
+  }
+  .home .site-main .home-area1-wrapper .home-area1 .home-phone figure {
+    max-width: 600px;
+  }
+  .home .site-main .home-area2 {
+    max-width: 50rem;
+    margin: 0 auto;
+  }
+  .home .site-main .home-area3 {
+    padding: 30px;
+  }
+  .home .site-main .home-area3 article {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .home .site-main .home-area3 article h2, .home .site-main .home-area3 article .home-area5 .area5-review .area5-review-content .reviewer, .home-area5 .area5-review .area5-review-content .home .site-main .home-area3 article .reviewer, .home .site-main .home-area3 article .home-area5 .area5-review .area5-review-content .occupation, .home-area5 .area5-review .area5-review-content .home .site-main .home-area3 article .occupation, .home .site-main .home-area3 article .home-area5 .area5-review .area5-review-content a, .home-area5 .area5-review .area5-review-content .home .site-main .home-area3 article a, .home .site-main .home-area3 .review-area3 article .area3-review-content .client-name, .review-area3 .home .site-main .home-area3 article .area3-review-content .client-name, .home .site-main .home-area3 .review-area3 article .area3-review-content .client-designation, .review-area3 .home .site-main .home-area3 article .area3-review-content .client-designation, .home .site-main .home-area3 .review-area3 article .area3-review-content .read-more-link a, .review-area3 .home .site-main .home-area3 article .area3-review-content .read-more-link a {
+    font-size: 1.8rem;
+  }
+  .home .site-main .home-area3 article p {
+    font-size: 1.2rem;
+  }
+  .home .site-main .home-area3 article:nth-child(odd) figure {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+  }
+  .home .site-main .home-area3 article:nth-child(odd) .area3-content {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+  .home .site-main .home-area4 article .number h2, .home .site-main .home-area4 article .number .home-area5 .area5-review .area5-review-content .reviewer, .home-area5 .area5-review .area5-review-content .home .site-main .home-area4 article .number .reviewer, .home .site-main .home-area4 article .number .home-area5 .area5-review .area5-review-content .occupation, .home-area5 .area5-review .area5-review-content .home .site-main .home-area4 article .number .occupation, .home .site-main .home-area4 article .number .home-area5 .area5-review .area5-review-content a, .home-area5 .area5-review .area5-review-content .home .site-main .home-area4 article .number a, .home .site-main .home-area4 .review-area3 article .number .area3-review-content .client-name, .review-area3 .home .site-main .home-area4 article .number .area3-review-content .client-name, .home .site-main .home-area4 .review-area3 article .area3-review-content .number .client-name, .review-area3 .home .site-main .home-area4 article .area3-review-content .number .client-name, .home .site-main .home-area4 .review-area3 article .number .area3-review-content .client-designation, .review-area3 .home .site-main .home-area4 article .number .area3-review-content .client-designation, .home .site-main .home-area4 .review-area3 article .area3-review-content .number .client-designation, .review-area3 .home .site-main .home-area4 article .area3-review-content .number .client-designation, .home .site-main .home-area4 .review-area3 article .number .area3-review-content .read-more-link a, .review-area3 .home .site-main .home-area4 article .number .area3-review-content .read-more-link a, .home .site-main .home-area4 .review-area3 article .area3-review-content .read-more-link .number a, .review-area3 .home .site-main .home-area4 article .area3-review-content .read-more-link .number a {
+    font-size: 9rem;
+  }
+  .home .site-main .home-area4 article h1 {
+    font-size: 2.5rem;
+  }
+  .home .site-main .home-area4 article p {
+    font-size: 1.5rem;
+  }
+  .home .site-main .home-area5 .area5-review {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .home .site-main .home-area5 .area5-review figure {
+    max-width: 25rem;
+  }
+  .home .site-main .home-area5 .area5-review .area5-review-content h1 {
+    font-size: 2rem;
+  }
+  .home .site-main .home-area5 .area5-review .area5-review-content h2, .home .site-main .home-area5 .area5-review .area5-review-content .reviewer, .home .site-main .home-area5 .area5-review .area5-review-content .occupation, .home .site-main .home-area5 .area5-review .area5-review-content a, .home .site-main .home-area5 .area5-review .area5-review-content .review-area3 article .area3-review-content .client-name, .review-area3 article .area3-review-content .home .site-main .home-area5 .area5-review .area5-review-content .client-name, .home .site-main .home-area5 .area5-review .area5-review-content .review-area3 article .area3-review-content .client-designation, .review-area3 article .area3-review-content .home .site-main .home-area5 .area5-review .area5-review-content .client-designation {
+    font-size: 1rem;
+  }
+  .home .site-main .home-area5 .area5-review .area5-review-content .occupation, .home .site-main .home-area5 .area5-review .area5-review-content a {
+    font-size: .8rem;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  /* Homepage Area 5 ===================== */
+  .home-area5 .area5-review {
+    max-width: 55rem;
+    margin: 0 auto;
+  }
+  .home-area5 .area5-review figure {
+    max-width: 25rem;
+  }
+  .home-area5 .area5-review .area5-review-content h2, .home-area5 .area5-review .area5-review-content .reviewer, .home-area5 .area5-review .area5-review-content .occupation, .home-area5 .area5-review .area5-review-content a, .home-area5 .area5-review .area5-review-content .review-area3 article .area3-review-content .client-name, .review-area3 article .area3-review-content .home-area5 .area5-review .area5-review-content .client-name, .home-area5 .area5-review .area5-review-content .review-area3 article .area3-review-content .client-designation, .review-area3 article .area3-review-content .home-area5 .area5-review .area5-review-content .client-designation, .home-area5 .area5-review .area5-review-content .review-area3 article .area3-review-content .read-more-link a, .review-area3 article .area3-review-content .read-more-link .home-area5 .area5-review .area5-review-content a {
+    font-size: 1.3rem !important;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  /* Homepage Area 1 ===================== */
+  .home-area1-wrapper {
+    height: 34rem !important;
+  }
+  .home-area1-wrapper .home-area1 {
+    max-height: 430px;
+    padding-top: 10rem !important;
+  }
+  .home-area1-wrapper .home-area1 .area1-heading {
+    padding-bottom: 7rem;
+    padding-left: 5rem;
+    -webkit-box-align: start !important;
+        -ms-flex-align: start !important;
+            align-items: flex-start !important;
+  }
+  .home-area1-wrapper .home-area1 .area1-heading .area1-download p {
+    text-align: left !important;
+  }
+  .home-area1-wrapper .home-area1 .area1-heading .area1-download .area1-download-pics figure {
+    margin: 10px 10px 10px 0 !important;
+  }
+  .home-area1-wrapper .home-area1 .home-phone {
+    max-width: 350px !important;
+  }
+  /* Homepage Area 3 ===================== */
+  .home-area3 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem;
+  }
+  .home-area3 article {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .home-area3 .area3-heading {
+    grid-column: 1/-1;
+  }
+  /* Homepage Area 4 ===================== */
+  .home-area4 article {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+  .home-area4 article figure {
+    margin: 0;
+  }
+  .home-area4 article.post-476 .area4-content, .home-area4 article.post-478 .area4-content, .home-area4 article.post-480 .area4-content {
+    padding-left: 20px;
+  }
+  .home-area4 article.post-477 figure, .home-area4 article.post-479 figure {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .home-area4 article.post-477 .area4-content, .home-area4 article.post-479 .area4-content {
+    padding-right: 20px;
+  }
+}
+
+@media only screen and (min-width: 650px) {
+  /* Contact Area 1 ===================== */
+  .contact-area1 .contact-area1-heading h1 {
+    font-size: 1.7rem !important;
+  }
+  .contact-area1 .contact-area1-heading h2, .contact-area1 .contact-area1-heading .home-area5 .area5-review .area5-review-content .reviewer, .home-area5 .area5-review .area5-review-content .contact-area1 .contact-area1-heading .reviewer, .contact-area1 .contact-area1-heading .home-area5 .area5-review .area5-review-content .occupation, .home-area5 .area5-review .area5-review-content .contact-area1 .contact-area1-heading .occupation, .contact-area1 .contact-area1-heading .home-area5 .area5-review .area5-review-content a, .home-area5 .area5-review .area5-review-content .contact-area1 .contact-area1-heading a, .contact-area1 .contact-area1-heading .review-area3 article .area3-review-content .client-name, .review-area3 article .area3-review-content .contact-area1 .contact-area1-heading .client-name, .contact-area1 .contact-area1-heading .review-area3 article .area3-review-content .client-designation, .review-area3 article .area3-review-content .contact-area1 .contact-area1-heading .client-designation, .contact-area1 .contact-area1-heading .review-area3 article .area3-review-content .read-more-link a, .review-area3 article .area3-review-content .read-more-link .contact-area1 .contact-area1-heading a {
+    font-size: 1.3rem !important;
+  }
+  .contact-area1 .contact-area1-intro {
+    font-size: .9rem !important;
+  }
+  /* Contact Form ===================== */
+  #nf-field-4-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #nf-field-4-wrap .nf-field-element {
+    width: 270px !important;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  /* Contact Area 1 ===================== */
+  .contact-area1 .contact-area1-content {
+    top: 30%;
+  }
+  .contact-area1 .contact-area1-content .contact-area1-heading h1 {
+    font-size: 2rem !important;
+  }
+  .contact-area1 .contact-area1-content .contact-area1-heading h2, .contact-area1 .contact-area1-content .contact-area1-heading .home-area5 .area5-review .area5-review-content .reviewer, .home-area5 .area5-review .area5-review-content .contact-area1 .contact-area1-content .contact-area1-heading .reviewer, .contact-area1 .contact-area1-content .contact-area1-heading .home-area5 .area5-review .area5-review-content .occupation, .home-area5 .area5-review .area5-review-content .contact-area1 .contact-area1-content .contact-area1-heading .occupation, .contact-area1 .contact-area1-content .contact-area1-heading .home-area5 .area5-review .area5-review-content a, .home-area5 .area5-review .area5-review-content .contact-area1 .contact-area1-content .contact-area1-heading a, .contact-area1 .contact-area1-content .contact-area1-heading .review-area3 article .area3-review-content .client-name, .review-area3 article .area3-review-content .contact-area1 .contact-area1-content .contact-area1-heading .client-name, .contact-area1 .contact-area1-content .contact-area1-heading .review-area3 article .area3-review-content .client-designation, .review-area3 article .area3-review-content .contact-area1 .contact-area1-content .contact-area1-heading .client-designation, .contact-area1 .contact-area1-content .contact-area1-heading .review-area3 article .area3-review-content .read-more-link a, .review-area3 article .area3-review-content .read-more-link .contact-area1 .contact-area1-content .contact-area1-heading a {
+    font-size: 1.5rem !important;
+  }
+  .contact-area1 .contact-area1-content .contact-area1-intro {
+    font-size: 1rem !important;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  /* Contact Area 1 ===================== */
+  .contact-area1 .contact-area1-content {
+    top: 30%;
+  }
+  .contact-area1 .contact-area1-content .contact-area1-heading h1 {
+    font-size: 3rem !important;
+  }
+  .contact-area1 .contact-area1-content .contact-area1-heading h2, .contact-area1 .contact-area1-content .contact-area1-heading .home-area5 .area5-review .area5-review-content .reviewer, .home-area5 .area5-review .area5-review-content .contact-area1 .contact-area1-content .contact-area1-heading .reviewer, .contact-area1 .contact-area1-content .contact-area1-heading .home-area5 .area5-review .area5-review-content .occupation, .home-area5 .area5-review .area5-review-content .contact-area1 .contact-area1-content .contact-area1-heading .occupation, .contact-area1 .contact-area1-content .contact-area1-heading .home-area5 .area5-review .area5-review-content a, .home-area5 .area5-review .area5-review-content .contact-area1 .contact-area1-content .contact-area1-heading a, .contact-area1 .contact-area1-content .contact-area1-heading .review-area3 article .area3-review-content .client-name, .review-area3 article .area3-review-content .contact-area1 .contact-area1-content .contact-area1-heading .client-name, .contact-area1 .contact-area1-content .contact-area1-heading .review-area3 article .area3-review-content .client-designation, .review-area3 article .area3-review-content .contact-area1 .contact-area1-content .contact-area1-heading .client-designation, .contact-area1 .contact-area1-content .contact-area1-heading .review-area3 article .area3-review-content .read-more-link a, .review-area3 article .area3-review-content .read-more-link .contact-area1 .contact-area1-content .contact-area1-heading a {
+    font-size: 1.8rem !important;
+  }
+  .contact-area1 .contact-area1-content .contact-area1-intro {
+    font-size: 1.4rem !important;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  /********Contact Area2*************/
+  .page-id-2 .wp-block-group .wp-block-group__inner-container {
+    margin: 4rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .page-id-2 .wp-block-group .wp-block-group__inner-container .contact-address {
+    margin: 0 4rem;
+  }
+}
+
+@media only screen and (min-width: 650px) {
+  /* Team Area 1 ===================== */
+  .team-area1 .page-title h1 {
+    font-size: 1.7rem !important;
+  }
+  .team-area1 .page-title h2, .team-area1 .page-title .home-area5 .area5-review .area5-review-content .reviewer, .home-area5 .area5-review .area5-review-content .team-area1 .page-title .reviewer, .team-area1 .page-title .home-area5 .area5-review .area5-review-content .occupation, .home-area5 .area5-review .area5-review-content .team-area1 .page-title .occupation, .team-area1 .page-title .home-area5 .area5-review .area5-review-content a, .home-area5 .area5-review .area5-review-content .team-area1 .page-title a, .team-area1 .page-title .review-area3 article .area3-review-content .client-name, .review-area3 article .area3-review-content .team-area1 .page-title .client-name, .team-area1 .page-title .review-area3 article .area3-review-content .client-designation, .review-area3 article .area3-review-content .team-area1 .page-title .client-designation, .team-area1 .page-title .review-area3 article .area3-review-content .read-more-link a, .review-area3 article .area3-review-content .read-more-link .team-area1 .page-title a {
+    font-size: 1.3rem !important;
+  }
+  .team-area1 .page-description {
+    font-size: .9rem !important;
+  }
+  .team-area2 article {
+    margin: 30px;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  /* Team Area 1 ===================== */
+  .team-area1 .team-banner-content {
+    top: 30%;
+  }
+  .team-area1 .team-banner-content .page-title h1 {
+    font-size: 2rem !important;
+  }
+  .team-area1 .team-banner-content .page-title h2, .team-area1 .team-banner-content .page-title .home-area5 .area5-review .area5-review-content .reviewer, .home-area5 .area5-review .area5-review-content .team-area1 .team-banner-content .page-title .reviewer, .team-area1 .team-banner-content .page-title .home-area5 .area5-review .area5-review-content .occupation, .home-area5 .area5-review .area5-review-content .team-area1 .team-banner-content .page-title .occupation, .team-area1 .team-banner-content .page-title .home-area5 .area5-review .area5-review-content a, .home-area5 .area5-review .area5-review-content .team-area1 .team-banner-content .page-title a, .team-area1 .team-banner-content .page-title .review-area3 article .area3-review-content .client-name, .review-area3 article .area3-review-content .team-area1 .team-banner-content .page-title .client-name, .team-area1 .team-banner-content .page-title .review-area3 article .area3-review-content .client-designation, .review-area3 article .area3-review-content .team-area1 .team-banner-content .page-title .client-designation, .team-area1 .team-banner-content .page-title .review-area3 article .area3-review-content .read-more-link a, .review-area3 article .area3-review-content .read-more-link .team-area1 .team-banner-content .page-title a {
+    font-size: 1.5rem !important;
+  }
+  .team-area1 .team-banner-content .page-description {
+    font-size: 1rem !important;
+  }
+  .team-area2 article {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    max-width: 70rem;
+    padding: 2rem 0;
+    margin: 0 auto;
+  }
+  .team-area2 article .post-thumbnail {
+    max-width: 30rem;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+  }
+  .team-area2 article .post-thumbnail:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  .team-area2 article .member-info {
+    text-align: left;
+    margin: 0 30px;
+  }
+  .team-area2 article:nth-child(even) .post-thumbnail {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+  }
+  .team-area2 article:nth-child(even) .member-info {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  /* Contact Area 1 ===================== */
+  .team-area1 .team-banner-content .page-title h1 {
+    font-size: 3rem !important;
+  }
+  .team-area1 .team-banner-content .page-title h2, .team-area1 .team-banner-content .page-title .home-area5 .area5-review .area5-review-content .reviewer, .home-area5 .area5-review .area5-review-content .team-area1 .team-banner-content .page-title .reviewer, .team-area1 .team-banner-content .page-title .home-area5 .area5-review .area5-review-content .occupation, .home-area5 .area5-review .area5-review-content .team-area1 .team-banner-content .page-title .occupation, .team-area1 .team-banner-content .page-title .home-area5 .area5-review .area5-review-content a, .home-area5 .area5-review .area5-review-content .team-area1 .team-banner-content .page-title a, .team-area1 .team-banner-content .page-title .review-area3 article .area3-review-content .client-name, .review-area3 article .area3-review-content .team-area1 .team-banner-content .page-title .client-name, .team-area1 .team-banner-content .page-title .review-area3 article .area3-review-content .client-designation, .review-area3 article .area3-review-content .team-area1 .team-banner-content .page-title .client-designation, .team-area1 .team-banner-content .page-title .review-area3 article .area3-review-content .read-more-link a, .review-area3 article .area3-review-content .read-more-link .team-area1 .team-banner-content .page-title a {
+    font-size: 1.8rem !important;
+  }
+  .team-area1 .team-banner-content .page-description {
+    font-size: 1.4rem !important;
+  }
+  .team-area2 article {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    justify-items: center;
+  }
+}
+
+@media only screen and (min-width: 650px) {
+  /* Faq Area 1 ===================== */
+  .faq-area1 .page-title h1 {
+    font-size: 1.7rem !important;
+  }
+  .faq-area1 .page-title h2, .faq-area1 .page-title .home-area5 .area5-review .area5-review-content .reviewer, .home-area5 .area5-review .area5-review-content .faq-area1 .page-title .reviewer, .faq-area1 .page-title .home-area5 .area5-review .area5-review-content .occupation, .home-area5 .area5-review .area5-review-content .faq-area1 .page-title .occupation, .faq-area1 .page-title .home-area5 .area5-review .area5-review-content a, .home-area5 .area5-review .area5-review-content .faq-area1 .page-title a, .faq-area1 .page-title .review-area3 article .area3-review-content .client-name, .review-area3 article .area3-review-content .faq-area1 .page-title .client-name, .faq-area1 .page-title .review-area3 article .area3-review-content .client-designation, .review-area3 article .area3-review-content .faq-area1 .page-title .client-designation, .faq-area1 .page-title .review-area3 article .area3-review-content .read-more-link a, .review-area3 article .area3-review-content .read-more-link .faq-area1 .page-title a {
+    font-size: 1.3rem !important;
+  }
+  .faq-area1 .page-description {
+    font-size: .9rem !important;
+  }
+  .faq-popular-question, .faq-how-use {
+    max-width: 55rem;
+    margin: 0 auto !important;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  /* Faq Area 1 ===================== */
+  .faq-area1 .faq-banner-content {
+    top: 35%;
+  }
+  .faq-area1 .faq-banner-content .page-title h1 {
+    font-size: 2rem !important;
+  }
+  .faq-area1 .faq-banner-content .page-title h2, .faq-area1 .faq-banner-content .page-title .home-area5 .area5-review .area5-review-content .reviewer, .home-area5 .area5-review .area5-review-content .faq-area1 .faq-banner-content .page-title .reviewer, .faq-area1 .faq-banner-content .page-title .home-area5 .area5-review .area5-review-content .occupation, .home-area5 .area5-review .area5-review-content .faq-area1 .faq-banner-content .page-title .occupation, .faq-area1 .faq-banner-content .page-title .home-area5 .area5-review .area5-review-content a, .home-area5 .area5-review .area5-review-content .faq-area1 .faq-banner-content .page-title a, .faq-area1 .faq-banner-content .page-title .review-area3 article .area3-review-content .client-name, .review-area3 article .area3-review-content .faq-area1 .faq-banner-content .page-title .client-name, .faq-area1 .faq-banner-content .page-title .review-area3 article .area3-review-content .client-designation, .review-area3 article .area3-review-content .faq-area1 .faq-banner-content .page-title .client-designation, .faq-area1 .faq-banner-content .page-title .review-area3 article .area3-review-content .read-more-link a, .review-area3 article .area3-review-content .read-more-link .faq-area1 .faq-banner-content .page-title a {
+    font-size: 1.5rem !important;
+  }
+  .faq-area1 .faq-banner-content .page-description {
+    font-size: 1rem !important;
+  }
+  /* Faq Area 2 ===================== */
+}
+
+@media only screen and (min-width: 1000px) {
+  /* Faq Area 1 ===================== */
+  .faq-area1 .faq-banner-content {
+    top: 30%;
+  }
+  .faq-area1 .faq-banner-content .page-title h1 {
+    font-size: 3rem !important;
+  }
+  .faq-area1 .faq-banner-content .page-title h2, .faq-area1 .faq-banner-content .page-title .home-area5 .area5-review .area5-review-content .reviewer, .home-area5 .area5-review .area5-review-content .faq-area1 .faq-banner-content .page-title .reviewer, .faq-area1 .faq-banner-content .page-title .home-area5 .area5-review .area5-review-content .occupation, .home-area5 .area5-review .area5-review-content .faq-area1 .faq-banner-content .page-title .occupation, .faq-area1 .faq-banner-content .page-title .home-area5 .area5-review .area5-review-content a, .home-area5 .area5-review .area5-review-content .faq-area1 .faq-banner-content .page-title a, .faq-area1 .faq-banner-content .page-title .review-area3 article .area3-review-content .client-name, .review-area3 article .area3-review-content .faq-area1 .faq-banner-content .page-title .client-name, .faq-area1 .faq-banner-content .page-title .review-area3 article .area3-review-content .client-designation, .review-area3 article .area3-review-content .faq-area1 .faq-banner-content .page-title .client-designation, .faq-area1 .faq-banner-content .page-title .review-area3 article .area3-review-content .read-more-link a, .review-area3 article .area3-review-content .read-more-link .faq-area1 .faq-banner-content .page-title a {
+    font-size: 1.8rem !important;
+  }
+  .faq-area1 .faq-banner-content .page-description {
+    font-size: 1.4rem !important;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  /* Review Area 1 ===================== */
+  .review-area1 .review-area1-heading h1 {
+    font-size: 1.7rem !important;
+  }
+  .review-area1 .review-area1-heading h2, .review-area1 .review-area1-heading .home-area5 .area5-review .area5-review-content .reviewer, .home-area5 .area5-review .area5-review-content .review-area1 .review-area1-heading .reviewer, .review-area1 .review-area1-heading .home-area5 .area5-review .area5-review-content .occupation, .home-area5 .area5-review .area5-review-content .review-area1 .review-area1-heading .occupation, .review-area1 .review-area1-heading .home-area5 .area5-review .area5-review-content a, .home-area5 .area5-review .area5-review-content .review-area1 .review-area1-heading a, .review-area1 .review-area1-heading .review-area3 article .area3-review-content .client-name, .review-area3 article .area3-review-content .review-area1 .review-area1-heading .client-name, .review-area1 .review-area1-heading .review-area3 article .area3-review-content .client-designation, .review-area3 article .area3-review-content .review-area1 .review-area1-heading .client-designation, .review-area1 .review-area1-heading .review-area3 article .area3-review-content .read-more-link a, .review-area3 article .area3-review-content .read-more-link .review-area1 .review-area1-heading a {
+    font-size: 1.3rem !important;
+  }
+  .review-area1 .review-area1-intro {
+    font-size: .9rem !important;
+  }
+  /* Review Area 3 ===================== */
+  .review-area3 article {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .review-area3 article figure {
+    max-width: 25rem;
+  }
+  .review-area3 article .area3-review-content h2, .review-area3 article .area3-review-content .home-area5 .area5-review .area5-review-content .reviewer, .home-area5 .area5-review .area5-review-content .review-area3 article .area3-review-content .reviewer, .review-area3 article .area3-review-content .home-area5 .area5-review .area5-review-content .occupation, .home-area5 .area5-review .area5-review-content .review-area3 article .area3-review-content .occupation, .review-area3 article .area3-review-content .home-area5 .area5-review .area5-review-content a, .home-area5 .area5-review .area5-review-content .review-area3 article .area3-review-content a, .review-area3 article .area3-review-content .client-name, .review-area3 article .area3-review-content .client-designation, .review-area3 article .area3-review-content .read-more-link a {
+    font-size: 1rem;
+  }
+  .review-area3 article .area3-review-content .client-designation, .review-area3 article .area3-review-content .read-more-link a {
+    font-size: .8rem !important;
+    margin-bottom: 10px;
+  }
+  .review-area3 article:nth-of-type(2) .area3-review-content {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+  .review-area3 article:nth-of-type(2) figure {
+    margin-left: auto !important;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  /* Review Area 1 ===================== */
+  .review-area1 .review-area1-content {
+    top: 35%;
+  }
+  .review-area1 .review-area1-content .review-area1-heading h1 {
+    font-size: 2rem !important;
+  }
+  .review-area1 .review-area1-content .review-area1-heading h2, .review-area1 .review-area1-content .review-area1-heading .home-area5 .area5-review .area5-review-content .reviewer, .home-area5 .area5-review .area5-review-content .review-area1 .review-area1-content .review-area1-heading .reviewer, .review-area1 .review-area1-content .review-area1-heading .home-area5 .area5-review .area5-review-content .occupation, .home-area5 .area5-review .area5-review-content .review-area1 .review-area1-content .review-area1-heading .occupation, .review-area1 .review-area1-content .review-area1-heading .home-area5 .area5-review .area5-review-content a, .home-area5 .area5-review .area5-review-content .review-area1 .review-area1-content .review-area1-heading a, .review-area1 .review-area1-content .review-area1-heading .review-area3 article .area3-review-content .client-name, .review-area3 article .area3-review-content .review-area1 .review-area1-content .review-area1-heading .client-name, .review-area1 .review-area1-content .review-area1-heading .review-area3 article .area3-review-content .client-designation, .review-area3 article .area3-review-content .review-area1 .review-area1-content .review-area1-heading .client-designation, .review-area1 .review-area1-content .review-area1-heading .review-area3 article .area3-review-content .read-more-link a, .review-area3 article .area3-review-content .read-more-link .review-area1 .review-area1-content .review-area1-heading a {
+    font-size: 1.5rem !important;
+  }
+  .review-area1 .review-area1-content .review-area1-intro {
+    font-size: 1rem !important;
+  }
+  /* Review Area 2 ===================== */
+  .review-area2 {
+    margin: 4rem auto;
+  }
+  /* Review Area 3 ===================== */
+  .review-area3 {
+    max-width: 55rem;
+    margin: 0 auto;
+  }
+  .review-area3 figure {
+    max-width: 25rem;
+  }
+  .review-area3 .area3-review-content h2, .review-area3 .area3-review-content .home-area5 .area5-review .area5-review-content .reviewer, .home-area5 .area5-review .area5-review-content .review-area3 .area3-review-content .reviewer, .review-area3 .area3-review-content .home-area5 .area5-review .area5-review-content .occupation, .home-area5 .area5-review .area5-review-content .review-area3 .area3-review-content .occupation, .review-area3 .area3-review-content .home-area5 .area5-review .area5-review-content a, .home-area5 .area5-review .area5-review-content .review-area3 .area3-review-content a, .review-area3 article .area3-review-content .client-name, .review-area3 article .area3-review-content .client-designation, .review-area3 article .area3-review-content .read-more-link a {
+    font-size: 1.3rem !important;
+  }
+  .review-area3 .area3-review-content .client-designation, .review-area3 article .area3-review-content .read-more-link a {
+    margin-bottom: 20px !important;
+  }
+  /* Review Area 4 ===================== */
+  .rate-content {
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+  }
+  .rate-content article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 auto;
+  }
+  /* Review Area 5 ===================== */
+  .review-area5 article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .review-area5 article .cta-content {
+    padding-left: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  /* Review Area 1 ===================== */
+  .review-area1 .review-area1-content {
+    top: 35%;
+  }
+  .review-area1 .review-area1-content .review-area1-heading h1 {
+    font-size: 3rem !important;
+  }
+  .review-area1 .review-area1-content .review-area1-heading h2, .review-area1 .review-area1-content .review-area1-heading .home-area5 .area5-review .area5-review-content .reviewer, .home-area5 .area5-review .area5-review-content .review-area1 .review-area1-content .review-area1-heading .reviewer, .review-area1 .review-area1-content .review-area1-heading .home-area5 .area5-review .area5-review-content .occupation, .home-area5 .area5-review .area5-review-content .review-area1 .review-area1-content .review-area1-heading .occupation, .review-area1 .review-area1-content .review-area1-heading .home-area5 .area5-review .area5-review-content a, .home-area5 .area5-review .area5-review-content .review-area1 .review-area1-content .review-area1-heading a, .review-area1 .review-area1-content .review-area1-heading .review-area3 article .area3-review-content .client-name, .review-area3 article .area3-review-content .review-area1 .review-area1-content .review-area1-heading .client-name, .review-area1 .review-area1-content .review-area1-heading .review-area3 article .area3-review-content .client-designation, .review-area3 article .area3-review-content .review-area1 .review-area1-content .review-area1-heading .client-designation, .review-area1 .review-area1-content .review-area1-heading .review-area3 article .area3-review-content .read-more-link a, .review-area3 article .area3-review-content .read-more-link .review-area1 .review-area1-content .review-area1-heading a {
+    font-size: 1.8rem !important;
+  }
+  .review-area1 .review-area1-content .review-area1-intro {
+    font-size: 1.4rem !important;
+  }
+}
+/*# sourceMappingURL=style.css.map */

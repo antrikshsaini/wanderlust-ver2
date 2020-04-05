@@ -1,0 +1,41 @@
+.review-area2 {
+    font-family: $font;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem 2rem;
+    border: 1px solid $yellow;
+    border-radius: 13px;
+    padding: 2rem;
+    max-width: 60rem;
+
+    .review-app-intro {
+         
+        h2 {
+            color: $dark-blue;
+            font-size: 2rem;
+            font-weight: 900;
+            line-height: 1.5;
+            margin-top: 0;
+        }
+
+        p {
+            color: $dark-blue;
+            font-size: 1.2rem;
+            font-weight: 700;
+            line-height: 1.5;
+        }
+
+        a {
+            color: $blue;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: underline;
+        }
+    }
+}
+    
+    
+
+    
+

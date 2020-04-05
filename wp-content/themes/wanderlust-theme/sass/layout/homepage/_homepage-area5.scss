@@ -1,0 +1,65 @@
+.home-area5 {
+
+    .area5-heading {
+        padding-top: 30px;
+
+        h1 {
+            font-family: $font;
+            color: $blue;
+            font-weight: 700;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            text-align: center;
+        }
+    }
+
+    .area5-review {
+        background-color: $light-grey;
+
+        figure {
+            margin: 0;
+        }
+
+        .area5-review-content {
+            padding: 40px;
+
+            h1 {
+                font-family: $font;
+                color: $dark-blue;
+                font-weight: 700;
+                font-size: 3rem;
+                margin: 0;
+            }
+
+            h2 {
+                font-family: $font;
+                color: $dark-blue;
+                font-size: 1.5rem;
+                line-height: 1.5;
+                margin: 0;
+            }
+
+            .reviewer {
+                @extend h2;
+                font-weight: 500;
+                padding-top: 30px;
+            }
+
+            .occupation {
+                @extend .reviewer;
+                font-size: 1.2rem;
+                padding: 0;
+                margin-bottom: 20px;
+            }
+
+            a {
+                @extend .occupation;
+                color: $blue;
+                border-bottom: 2px solid $blue;
+                padding-bottom: 5px;
+            }
+        }
+    }
+
+   
+}

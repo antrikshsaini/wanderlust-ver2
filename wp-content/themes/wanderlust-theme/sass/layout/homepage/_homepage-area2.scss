@@ -1,0 +1,29 @@
+.home-area2 {
+    padding: 20px;
+
+    .area2-heading {
+        font-family: $font;
+        color: $turquoise;
+        font-weight: 700;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .area2-aboutapp {
+        text-align: center;
+        margin: 20px;
+
+        p {
+            font-family: $font;
+            color: $dark-blue;
+            font-size: 1.3rem;
+            line-height: 1.5;
+
+            &:first-child {
+                font-weight: 700;
+            }
+        }
+
+    }
+}

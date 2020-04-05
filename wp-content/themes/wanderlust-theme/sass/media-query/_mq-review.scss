@@ -1,0 +1,176 @@
+@media screen and (min-width: 650px) {
+
+    /* Review Area 1 ===================== */
+
+    .review-area1 {
+    
+        .review-area1-heading {  
+    
+            h1 {
+                font-size: 1.7rem !important;
+            }
+
+            h2 {
+                font-size: 1.3rem !important;  
+            }
+        }
+        
+        .review-area1-intro {
+            font-size: .9rem !important;
+        }
+    }
+
+    /* Review Area 3 ===================== */
+    
+    .review-area3 {
+
+        article {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+    
+            figure {
+                max-width: 25rem;
+            }
+    
+            .area3-review-content {
+    
+                h2 {
+                    font-size: 1rem;
+                }
+
+                .client-designation {
+                    font-size: .8rem !important;
+                    margin-bottom: 10px;
+                }
+            }
+
+            &:nth-of-type(2) {
+
+                .area3-review-content {
+                    grid-column: 1/2;
+                    grid-row: 1;   
+                }
+        
+                figure {
+                    margin-left: auto !important; 
+                }
+            }
+
+        }
+    }
+}
+
+
+
+
+@media screen and (min-width: 800px) {
+
+    /* Review Area 1 ===================== */
+
+    .review-area1 {
+
+        .review-area1-content {
+            top: 35%;
+    
+            .review-area1-heading {  
+    
+                h1 {
+                    font-size: 2rem !important;
+                }
+    
+                h2 {
+                    font-size: 1.5rem !important;  
+                }
+            }
+            
+            .review-area1-intro {
+                font-size: 1rem !important;
+            }
+        }
+    }
+
+    /* Review Area 2 ===================== */
+
+    .review-area2 {
+        margin: 4rem auto;
+    }
+
+    /* Review Area 3 ===================== */
+
+    .review-area3 {
+        max-width: 55rem;
+        margin: 0 auto;
+
+        figure {
+            max-width: 25rem;
+        }
+
+        .area3-review-content {
+
+            h2 {
+                font-size: 1.3rem !important;
+            }
+
+            .client-designation {
+                margin-bottom: 20px !important;
+            }
+        }
+    }
+
+
+    /* Review Area 4 ===================== */
+    
+    .rate-content {
+        flex-direction: row !important;
+
+        article {
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+        }     
+    }
+
+    /* Review Area 5 ===================== */
+
+    .review-area5 {
+
+        article {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            .cta-content {
+                padding-left: 2rem;
+            } 
+        }   
+    }
+}
+
+
+@media only screen and (min-width: 1000px) {
+
+    /* Review Area 1 ===================== */
+
+    .review-area1 {
+
+        .review-area1-content {
+            top: 35%;
+
+            .review-area1-heading {  
+    
+                h1 {
+                    font-size: 3rem !important;
+                }
+    
+                h2 {
+                    font-size: 1.8rem !important;  
+                }
+            }
+            
+            .review-area1-intro {
+                font-size: 1.4rem !important;
+            }
+        }
+    } 
+}
